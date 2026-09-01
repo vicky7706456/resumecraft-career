@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ResumeCraft — Professional Resume Templates That Get Noticed</title>
+<meta name="description" content="Modern, ATS-friendly resume templates for students, freshers and professionals. Instant download, fully editable, professionally designed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF;
+  --bg-soft:#F7F7F4;
+  --bg-soft-2:#F1EFE9;
+  --ink:#0B1220;
+  --ink-soft:#525B6B;
+  --ink-faint:#8891A0;
+  --line:#E7E5DE;
+  --line-2:#DEDCD3;
+  --accent:#B8863B;
+  --accent-dark:#8E6425;
+  --accent-soft:#F3E7D2;
+  --green:#2F6E52;
+  --white:#fff;
+  --radius:16px;
+  --radius-sm:10px;
+  --shadow-sm:0 1px 2px rgba(11,18,32,0.06);
+  --shadow-md:0 8px 24px rgba(11,18,32,0.08);
+  --shadow-lg:0 24px 60px rgba(11,18,32,0.14);
+  --serif:'Fraunces', serif;
+  --sans:'Inter', sans-serif;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans); color:var(--ink); background:var(--bg); line-height:1.5; -webkit-font-smoothing:antialiased;}
+@media (prefers-reduced-motion: reduce){ *{animation-duration:.01ms !important; transition-duration:.01ms !important; scroll-behavior:auto !important;} }
+a{color:inherit; text-decoration:none;}
+img,svg{display:block; max-width:100%;}
+button{font-family:inherit; cursor:pointer;}
+input,select,textarea{font-family:inherit; font-size:14px;}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+ul{list-style:none;}
+
+.wrap{max-width:1240px; margin:0 auto; padding:0 24px;}
+.serif{font-family:var(--serif);}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; font-weight:600; font-size:14.5px; padding:13px 26px; border-radius:999px; border:1px solid transparent; transition:all .2s ease; white-space:nowrap;}
+.btn-dark{background:var(--ink); color:#fff;}
+.btn-dark:hover{background:#1a2436; transform:translateY(-1px); box-shadow:var(--shadow-md);}
+.btn-outline{background:transparent; border-color:var(--ink); color:var(--ink);}
+.btn-outline:hover{background:var(--ink); color:#fff;}
+.btn-accent{background:var(--accent); color:#fff;}
+.btn-accent:hover{background:var(--accent-dark); transform:translateY(-1px); box-shadow:var(--shadow-md);}
+.btn-ghost{background:var(--bg-soft); color:var(--ink); border-color:var(--line);}
+.btn-ghost:hover{background:var(--bg-soft-2);}
+.btn-sm{padding:9px 18px; font-size:13px;}
+.btn-block{width:100%;}
+.btn[disabled]{opacity:0.5; cursor:not-allowed; pointer-events:none;}
+.btn-icon{padding:10px; border-radius:50%; background:transparent; border:1px solid var(--line); display:inline-flex; align-items:center; justify-content:center;}
+.btn-icon:hover{border-color:var(--ink);}
+
+/* ===== Header ===== */
+header{position:sticky; top:0; z-index:60; background:rgba(255,255,255,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+.topbar{background:var(--ink); color:#fff; font-size:12.5px; text-align:center; padding:8px 12px; letter-spacing:.02em;}
+.topbar strong{color:var(--accent);}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0; gap:20px;}
+.logo{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; font-size:22px; flex-shrink:0;}
+.logo .mark{width:30px; height:30px; border-radius:8px; background:linear-gradient(145deg, var(--accent), var(--accent-dark)); position:relative; flex-shrink:0;}
+.logo .mark::before{content:""; position:absolute; top:7px; left:8px; width:14px; height:2px; background:#fff; box-shadow:0 5px 0 #fff, 0 10px 0 #fff;}
+.navlinks{display:flex; align-items:center; gap:30px; font-size:14.5px; font-weight:500;}
+.navlinks > a, .navdrop > button{color:var(--ink-soft); transition:color .15s; background:none; border:none; font-size:14.5px; font-weight:500; display:flex; align-items:center; gap:5px;}
+.navlinks > a:hover, .navdrop > button:hover{color:var(--ink);}
+.navdrop{position:relative;}
+.navdrop-menu{position:absolute; top:calc(100% + 14px); left:50%; transform:translateX(-50%); background:#fff; border:1px solid var(--line); border-radius:var(--radius-sm); box-shadow:var(--shadow-lg); padding:10px; min-width:210px; opacity:0; pointer-events:none; transform:translateX(-50%) translateY(6px); transition:all .18s ease;}
+.navdrop:hover .navdrop-menu, .navdrop:focus-within .navdrop-menu{opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0);}
+.navdrop-menu a{display:block; padding:9px 12px; border-radius:8px; font-size:13.5px; color:var(--ink-soft);}
+.navdrop-menu a:hover{background:var(--bg-soft); color:var(--ink);}
+.nav-actions{display:flex; align-items:center; gap:14px; flex-shrink:0;}
+.search-box{position:relative; display:flex; align-items:center;}
+.search-box input{border:1px solid var(--line); background:var(--bg-soft); border-radius:999px; padding:9px 16px 9px 36px; font-size:13.5px; width:200px; transition:width .2s, border-color .2s;}
+.search-box input:focus{width:250px; border-color:var(--accent); background:#fff;}
+.search-box svg{position:absolute; left:12px; width:15px; height:15px; color:var(--ink-faint);}
+.cart-btn{position:relative; display:flex; align-items:center; gap:8px; background:none; border:1px solid var(--line); border-radius:999px; padding:9px 16px; font-size:13.5px; font-weight:600;}
+.cart-btn:hover{border-color:var(--ink);}
+.cart-badge{background:var(--accent); color:#fff; font-size:10.5px; font-weight:700; width:18px; height:18px; border-radius:50%; display:flex; align-items:center; justify-content:center;}
+.menu-toggle{display:none; background:none; border:none; font-size:22px;}
+@media (max-width:1020px){
+  .navlinks{position:fixed; top:0; right:0; height:100%; width:280px; background:#fff; flex-direction:column; align-items:flex-start; padding:90px 26px 26px; gap:4px; transform:translateX(100%); transition:transform .25s ease; box-shadow:var(--shadow-lg); overflow-y:auto;}
+  .navlinks.open{transform:translateX(0);}
+  .navlinks > a, .navdrop{width:100%; padding:14px 0; border-bottom:1px solid var(--line);}
+  .navdrop-menu{position:static; opacity:1; pointer-events:auto; transform:none; box-shadow:none; border:none; padding:0 0 0 12px; display:none;}
+  .navdrop.mobile-open .navdrop-menu{display:block;}
+  .search-box input{width:140px;}
+  .search-box input:focus{width:160px;}
+  .menu-toggle{display:block;}
+}
+.nav-overlay{position:fixed; inset:0; background:rgba(11,18,32,.4); z-index:59; opacity:0; pointer-events:none; transition:opacity .2s;}
+.nav-overlay.open{opacity:1; pointer-events:auto;}
+
+/* ===== Hero ===== */
+.hero{padding:70px 0 40px; overflow:hidden;}
+.hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr; text-align:center;}}
+.eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--accent-dark); background:var(--accent-soft); padding:7px 14px; border-radius:999px; margin-bottom:22px;}
+.hero h1{font-family:var(--serif); font-weight:600; font-size:clamp(34px,4.6vw,58px); line-height:1.08; letter-spacing:-.01em; margin-bottom:22px;}
+.hero h1 em{font-style:italic; color:var(--accent-dark);}
+.hero p.lede{font-size:17.5px; color:var(--ink-soft); max-width:460px; margin-bottom:32px;}
+@media (max-width:900px){.hero p.lede{margin-left:auto; margin-right:auto;}}
+.hero-ctas{display:flex; gap:14px; margin-bottom:34px; flex-wrap:wrap;}
+@media (max-width:900px){.hero-ctas{justify-content:center;}}
+.hero-stats{display:flex; gap:34px; flex-wrap:wrap;}
+@media (max-width:900px){.hero-stats{justify-content:center;}}
+.hero-stats div b{display:block; font-family:var(--serif); font-size:24px;}
+.hero-stats div span{font-size:12.5px; color:var(--ink-faint);}
+.hero-visual{position:relative; height:460px;}
+@media (max-width:900px){.hero-visual{height:380px; margin-top:10px;}}
+.hv-card{position:absolute; border-radius:14px; box-shadow:var(--shadow-lg); background:#fff; border:1px solid var(--line); overflow:hidden;}
+.hv-card.main{width:260px; height:340px; top:30px; left:calc(50% - 130px); z-index:3;}
+.hv-card.back1{width:220px; height:290px; top:-10px; left:calc(50% - 260px); transform:rotate(-9deg); z-index:1; opacity:.9;}
+.hv-card.back2{width:220px; height:290px; top:70px; left:calc(50% + 40px); transform:rotate(8deg); z-index:2; opacity:.95;}
+.hv-badge{position:absolute; bottom:28px; left:calc(50% + 70px); background:#fff; border-radius:12px; box-shadow:var(--shadow-md); padding:12px 16px; display:flex; align-items:center; gap:10px; z-index:4; border:1px solid var(--line);}
+.hv-badge .ring{width:36px; height:36px;}
+.hv-badge b{font-size:13px; display:block;}
+.hv-badge span{font-size:11px; color:var(--ink-faint);}
+@keyframes floaty{0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);}}
+.hv-card.main{animation:floaty 6s ease-in-out infinite;}
+.hv-card.back1{animation:floaty 7s ease-in-out infinite .5s;}
+.hv-card.back2{animation:floaty 6.5s ease-in-out infinite 1s;}
+
+/* ===== Sections generic ===== */
+section{padding:76px 0;}
+.section-soft{background:var(--bg-soft);}
+.section-head{margin-bottom:42px;}
+.section-head .eyebrow{margin-bottom:14px;}
+.section-head h2{font-family:var(--serif); font-weight:600; font-size:clamp(26px,3.4vw,40px); letter-spacing:-.01em; margin-bottom:12px;}
+.section-head p{color:var(--ink-soft); font-size:15.5px; max-width:520px;}
+.section-head-row{display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap;}
+
+/* ===== Trust bar ===== */
+.trust-bar{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; padding:44px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+@media (max-width:760px){.trust-bar{grid-template-columns:1fr 1fr;}}
+.trust-item{display:flex; align-items:center; gap:14px;}
+.trust-item .ic{width:46px; height:46px; border-radius:12px; background:var(--accent-soft); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--accent-dark);}
+.trust-item b{display:block; font-size:14.5px; margin-bottom:2px;}
+.trust-item span{font-size:12.5px; color:var(--ink-faint);}
+
+/* ===== Product Grid & Cards ===== */
+.grid{display:grid; gap:24px;}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-8{grid-template-columns:repeat(4,1fr);}
+@media (max-width:1020px){.grid-4,.grid-3,.grid-8{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.grid-4,.grid-3,.grid-8{grid-template-columns:1fr;}}
+
+.card{background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; transition:transform .22s ease, box-shadow .22s ease, border-color .22s;}
+.card:hover{transform:translateY(-5px); box-shadow:var(--shadow-lg); border-color:var(--line-2);}
+.tpl-thumb{position:relative; aspect-ratio:3/4; background:var(--bg-soft); overflow:hidden; cursor:pointer;}
+.tpl-thumb svg{width:100%; height:100%;}
+.tpl-thumb .fold{position:absolute; top:0; right:0; width:0; height:0; border-style:solid; border-width:0 26px 26px 0; border-color:transparent var(--bg-soft-2) transparent transparent; filter:drop-shadow(-2px 2px 2px rgba(0,0,0,.06));}
+.tpl-quickview{position:absolute; inset:auto 0 0 0; background:rgba(11,18,32,.88); color:#fff; text-align:center; padding:12px; font-size:12.5px; font-weight:600; letter-spacing:.02em; transform:translateY(100%); transition:transform .22s ease;}
+.card:hover .tpl-quickview{transform:translateY(0);}
+.ats-ring{position:absolute; top:12px; left:12px; width:44px; height:44px; background:#fff; border-radius:50%; box-shadow:var(--shadow-sm); display:flex; align-items:center; justify-content:center;}
+.ats-ring svg{width:44px; height:44px; position:absolute;}
+.ats-ring span{position:relative; font-size:10.5px; font-weight:800; font-family:var(--sans);}
+.tpl-badge{position:absolute; top:12px; right:12px; background:var(--ink); color:#fff; font-size:10.5px; font-weight:700; padding:4px 9px; border-radius:6px; letter-spacing:.03em;}
+.tpl-badge.free{background:var(--green);}
+.card-body{padding:18px 18px 20px;}
+.card-cat{font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--accent-dark); font-weight:700; margin-bottom:6px;}
+.card-title{font-size:15.5px; font-weight:600; margin-bottom:8px; line-height:1.35;}
+.stars{display:inline-flex; align-items:center; gap:5px; color:var(--accent-dark); font-size:12.5px; margin-bottom:12px;}
+.stars .n{color:var(--ink-faint);}
+.card-foot{display:flex; align-items:center; justify-content:space-between;}
+.price{font-family:var(--serif); font-weight:600; font-size:18px;}
+.price .was{font-family:var(--sans); font-size:12.5px; color:var(--ink-faint); text-decoration:line-through; font-weight:500; margin-right:6px;}
+.view-btn{font-size:12.5px; font-weight:700; color:var(--ink); border-bottom:1.5px solid var(--accent); padding-bottom:1px;}
+
+/* ===== Category tiles ===== */
+.cat-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+@media (max-width:900px){.cat-grid{grid-template-columns:repeat(2,1fr);}}
+.cat-tile{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:26px 22px; transition:all .2s;}
+.cat-tile:hover{border-color:var(--accent); box-shadow:var(--shadow-md); transform:translateY(-3px);}
+.cat-tile .ic{width:42px; height:42px; border-radius:10px; background:var(--bg-soft); display:flex; align-items:center; justify-content:center; margin-bottom:16px; color:var(--accent-dark);}
+.cat-tile h4{font-size:15px; font-weight:600; margin-bottom:4px;}
+.cat-tile span{font-size:12.5px; color:var(--ink-faint);}
+
+/* ===== How it works ===== */
+.steps{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; position:relative;}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.steps{grid-template-columns:1fr;}}
+.step{position:relative; padding-top:8px;}
+.step .num{font-family:var(--serif); font-size:42px; color:var(--accent-soft); font-weight:700; line-height:1; margin-bottom:14px; -webkit-text-stroke:1.5px var(--accent);}
+.step h4{font-size:16px; font-weight:600; margin-bottom:8px;}
+.step p{font-size:13.5px; color:var(--ink-soft);}
+
+/* ===== Bundle ===== */
+.bundle-box{background:linear-gradient(135deg, var(--ink) 0%, #1a2436 100%); border-radius:24px; padding:56px; display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center; color:#fff; position:relative; overflow:hidden;}
+@media (max-width:900px){.bundle-box{grid-template-columns:1fr; padding:36px 26px;}}
+.bundle-box::before{content:""; position:absolute; width:400px; height:400px; background:radial-gradient(circle, rgba(184,134,59,0.25), transparent 70%); top:-150px; right:-100px;}
+.bundle-tag{display:inline-block; background:var(--accent); color:#fff; font-size:11.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:6px 14px; border-radius:999px; margin-bottom:18px;}
+.bundle-box h2{font-family:var(--serif); font-size:clamp(26px,3.4vw,38px); font-weight:600; margin-bottom:16px; position:relative;}
+.bundle-list{display:grid; gap:10px; margin-bottom:28px; position:relative;}
+.bundle-list li{display:flex; align-items:center; gap:10px; font-size:14.5px; color:#D8DCE5;}
+.bundle-list li svg{color:var(--accent); flex-shrink:0;}
+.bundle-price-row{display:flex; align-items:center; gap:16px; margin-bottom:24px; position:relative;}
+.bundle-price-row .now{font-family:var(--serif); font-size:38px; font-weight:600;}
+.bundle-price-row .was{font-size:16px; color:#8891A0; text-decoration:line-through;}
+.bundle-visual{position:relative; height:320px;}
+@media (max-width:900px){.bundle-visual{display:none;}}
+.bundle-visual .bv-card{position:absolute; width:150px; height:200px; border-radius:10px; box-shadow:0 20px 40px rgba(0,0,0,.4); overflow:hidden; border:1px solid rgba(255,255,255,0.1);}
+
+/* ===== Testimonials ===== */
+.testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+@media (max-width:900px){.testi-grid{grid-template-columns:1fr;}}
+.testi-card{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:28px; display:flex; flex-direction:column; gap:16px;}
+.testi-card .stars{margin-bottom:0;}
+.testi-card p.quote{font-size:14.5px; color:var(--ink-soft); flex:1; font-style:italic;}
+.testi-person{display:flex; align-items:center; gap:12px;}
+.testi-avatar{width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:14px; flex-shrink:0;}
+.testi-person b{font-size:13.5px; display:block;}
+.testi-person span{font-size:12px; color:var(--ink-faint);}
+.testi-verified{font-size:10.5px; color:var(--green); font-weight:700; display:flex; align-items:center; gap:4px; margin-top:2px;}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:780px; margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{width:100%; display:flex; justify-content:space-between; align-items:center; padding:22px 4px; background:none; border:none; text-align:left; font-size:15.5px; font-weight:600;}
+.faq-q .plus{font-size:20px; color:var(--accent); transition:transform .2s; flex-shrink:0; margin-left:16px;}
+.faq-item.open .plus{transform:rotate(45deg);}
+.faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
+.faq-a p{padding:0 4px 22px; color:var(--ink-soft); font-size:14.5px; max-width:660px;}
+.faq-item.open .faq-a{max-height:220px;}
+
+/* ===== Footer ===== */
+footer{background:var(--ink); color:#B9C0CC; padding:64px 0 28px;}
+.foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr 1fr; gap:30px; margin-bottom:50px;}
+@media (max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;}}
+.foot-grid h6{color:#fff; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:18px;}
+.foot-grid ul{display:flex; flex-direction:column; gap:11px; font-size:13.5px;}
+.foot-grid ul a:hover{color:#fff;}
+.foot-logo{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-size:20px; color:#fff; margin-bottom:14px;}
+.foot-brand p{font-size:13.5px; max-width:270px; margin-bottom:20px;}
+.foot-social{display:flex; gap:12px;}
+.foot-social a{width:36px; height:36px; border:1px solid #2A3549; border-radius:50%; display:flex; align-items:center; justify-content:center;}
+.foot-social a:hover{border-color:var(--accent); color:var(--accent);}
+.foot-bottom{border-top:1px solid #232D40; padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px;}
+
+/* ===== Breadcrumb / page header ===== */
+.page-hero{background:var(--bg-soft); padding:44px 0; border-bottom:1px solid var(--line);}
+.crumb{font-size:13px; color:var(--ink-faint); margin-bottom:10px;}
+.crumb a:hover{color:var(--ink);}
+.page-hero h1{font-family:var(--serif); font-size:clamp(26px,3.6vw,38px); font-weight:600;}
+
+/* ===== Shop layout ===== */
+.shop-layout{display:grid; grid-template-columns:240px 1fr; gap:36px; align-items:flex-start;}
+@media (max-width:860px){.shop-layout{grid-template-columns:1fr;}}
+.filter-box{border:1px solid var(--line); border-radius:var(--radius); padding:22px; position:sticky; top:90px;}
+.filter-box h5{font-size:13px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:14px; color:var(--ink-faint);}
+.filter-group{margin-bottom:26px;}
+.filter-opt{display:flex; align-items:center; gap:9px; padding:6px 0; font-size:14px; cursor:pointer;}
+.filter-opt input{accent-color:var(--accent); width:15px; height:15px;}
+.filter-opt span.count{color:var(--ink-faint); font-size:12px; margin-left:auto;}
+.price-range{display:flex; gap:8px; flex-wrap:wrap;}
+.chip{padding:5px 12px; border:1px solid var(--line); border-radius:999px; font-size:12.5px; cursor:pointer;}
+.chip.active{background:var(--ink); color:#fff; border-color:var(--ink);}
+.shop-toolbar{display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:12px;}
+.shop-toolbar select{border:1px solid var(--line); border-radius:8px; padding:9px 12px; font-size:13.5px; background:#fff;}
+.result-count{font-size:13.5px; color:var(--ink-soft);}
+.empty-state{text-align:center; padding:60px 20px; color:var(--ink-faint);}
+
+/* ===== Product Detail ===== */
+.pd-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px;}
+@media (max-width:900px){.pd-grid{grid-template-columns:1fr; gap:32px;}}
+.pd-main-img{aspect-ratio:3/4; border-radius:var(--radius); border:1px solid var(--line); overflow:hidden; background:var(--bg-soft); margin-bottom:14px; position:relative;}
+.pd-thumbs{display:flex; gap:10px;}
+.pd-thumbs .th{width:70px; height:92px; border-radius:8px; overflow:hidden; border:2px solid var(--line); cursor:pointer; flex-shrink:0;}
+.pd-thumbs .th.active{border-color:var(--accent);}
+.pd-info .card-cat{margin-bottom:10px;}
+.pd-info h1{font-family:var(--serif); font-size:clamp(24px,3vw,34px); font-weight:600; margin-bottom:14px;}
+.pd-rating-row{display:flex; align-items:center; gap:12px; margin-bottom:20px;}
+.pd-rating-row .stars{margin-bottom:0;}
+.pd-price-row{display:flex; align-items:baseline; gap:12px; margin-bottom:22px; padding-bottom:22px; border-bottom:1px solid var(--line);}
+.pd-price-row .now{font-family:var(--serif); font-size:32px; font-weight:600;}
+.pd-price-row .was{font-size:16px; color:var(--ink-faint); text-decoration:line-through;}
+.pd-price-row .save{font-size:12.5px; font-weight:700; color:var(--green); background:#E9F3EE; padding:4px 10px; border-radius:999px;}
+.pd-desc{color:var(--ink-soft); font-size:14.5px; margin-bottom:24px;}
+.pd-actions{display:flex; gap:12px; margin-bottom:26px;}
+.pd-actions .btn{flex:1;}
+.pd-meta-list{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:26px;}
+.pd-meta-item{display:flex; gap:10px; align-items:flex-start;}
+.pd-meta-item .ic{color:var(--accent); flex-shrink:0; margin-top:1px;}
+.pd-meta-item b{display:block; font-size:13px;}
+.pd-meta-item span{font-size:12px; color:var(--ink-faint);}
+.pd-tabs{display:flex; gap:26px; border-bottom:1px solid var(--line); margin-bottom:22px;}
+.pd-tab{padding:10px 2px; font-size:14px; font-weight:600; color:var(--ink-faint); border-bottom:2px solid transparent; margin-bottom:-1px;}
+.pd-tab.active{color:var(--ink); border-color:var(--accent);}
+.included-list{display:grid; gap:10px; font-size:14.5px; color:var(--ink-soft);}
+.included-list li{display:flex; gap:10px; align-items:flex-start;}
+.included-list svg{color:var(--green); flex-shrink:0; margin-top:2px;}
+
+/* ===== Cart Drawer ===== */
+.overlay{position:fixed; inset:0; background:rgba(11,18,32,.5); z-index:98; opacity:0; pointer-events:none; transition:opacity .2s;}
+.overlay.open{opacity:1; pointer-events:auto;}
+.drawer{position:fixed; top:0; right:0; height:100%; width:420px; max-width:94vw; background:#fff; z-index:99; transform:translateX(100%); transition:transform .28s ease; display:flex; flex-direction:column; box-shadow:var(--shadow-lg);}
+.drawer.open{transform:translateX(0);}
+.drawer-head{display:flex; justify-content:space-between; align-items:center; padding:22px 24px; border-bottom:1px solid var(--line);}
+.drawer-head h4{font-family:var(--serif); font-size:19px; font-weight:600;}
+.drawer-close{background:none; border:none; font-size:22px; color:var(--ink-faint);}
+.drawer-items{flex:1; overflow-y:auto; padding:10px 24px;}
+.drawer-item{display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--line);}
+.drawer-item .thumb{width:56px; height:74px; border-radius:8px; overflow:hidden; background:var(--bg-soft); flex-shrink:0;}
+.drawer-item .info{flex:1;}
+.drawer-item .info b{font-size:13.5px; display:block; margin-bottom:3px;}
+.drawer-item .info span{font-size:11.5px; color:var(--ink-faint);}
+.drawer-item .price{font-size:13.5px; font-weight:700; font-family:var(--sans);}
+.drawer-item .remove{font-size:11.5px; color:var(--ink-faint); text-decoration:underline; margin-top:6px; display:inline-block;}
+.drawer-empty{text-align:center; padding:60px 20px; color:var(--ink-faint); font-size:14px;}
+.drawer-foot{padding:22px 24px; border-top:1px solid var(--line);}
+.coupon-row{display:flex; gap:8px; margin-bottom:16px;}
+.coupon-row input{flex:1; border:1px solid var(--line); border-radius:8px; padding:10px 12px; font-size:13px;}
+.drawer-totals{display:flex; flex-direction:column; gap:8px; margin-bottom:18px; font-size:13.5px;}
+.drawer-totals .row{display:flex; justify-content:space-between;}
+.drawer-totals .row.grand{font-weight:700; font-size:16px; padding-top:10px; border-top:1px solid var(--line);}
+.coupon-msg{font-size:12px; margin-top:-8px; margin-bottom:14px;}
+.coupon-msg.ok{color:var(--green);}
+.coupon-msg.err{color:#B33A3A;}
+
+/* ===== Checkout ===== */
+.checkout-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:50px; align-items:flex-start;}
+@media (max-width:900px){.checkout-grid{grid-template-columns:1fr;}}
+.form-box{border:1px solid var(--line); border-radius:var(--radius); padding:28px; margin-bottom:22px;}
+.form-box h4{font-size:15px; margin-bottom:18px; display:flex; align-items:center; gap:8px;}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;}
+@media (max-width:520px){.form-row{grid-template-columns:1fr;}}
+.field label{font-size:12.5px; font-weight:600; margin-bottom:6px; display:block; color:var(--ink-soft);}
+.field input, .field select{width:100%; border:1px solid var(--line); border-radius:8px; padding:11px 13px; font-size:14px;}
+.field input:focus, .field select:focus{border-color:var(--accent);}
+.pay-methods{display:flex; gap:10px; margin-bottom:6px; flex-wrap:wrap;}
+.pay-method{border:1.5px solid var(--line); border-radius:10px; padding:12px 16px; font-size:13px; font-weight:600; display:flex; align-items:center; gap:8px; cursor:pointer;}
+.pay-method.active{border-color:var(--accent); background:var(--accent-soft);}
+.order-summary{border:1px solid var(--line); border-radius:var(--radius); padding:26px; position:sticky; top:90px;}
+.order-summary h4{font-family:var(--serif); font-size:18px; margin-bottom:18px;}
+.os-item{display:flex; gap:12px; padding:12px 0; border-bottom:1px solid var(--line); font-size:13.5px;}
+.os-item .thumb{width:44px; height:58px; border-radius:6px; overflow:hidden; background:var(--bg-soft); flex-shrink:0;}
+.os-item b{display:block; font-size:13px;}
+.os-item .p{margin-left:auto; font-weight:700;}
+
+/* ===== Confirmation ===== */
+.confirm-box{max-width:560px; margin:0 auto; text-align:center; padding:60px 0;}
+.confirm-icon{width:76px; height:76px; border-radius:50%; background:#E9F3EE; color:var(--green); display:flex; align-items:center; justify-content:center; margin:0 auto 26px;}
+.confirm-box h1{font-family:var(--serif); font-size:30px; margin-bottom:12px;}
+.confirm-box p{color:var(--ink-soft); margin-bottom:30px;}
+.download-list{border:1px solid var(--line); border-radius:var(--radius); text-align:left; margin-bottom:30px;}
+.download-item{display:flex; align-items:center; gap:14px; padding:16px 20px; border-bottom:1px solid var(--line);}
+.download-item:last-child{border-bottom:none;}
+.download-item .ic{width:38px; height:38px; border-radius:8px; background:var(--bg-soft); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+.download-item b{font-size:13.5px; display:block;}
+.download-item span{font-size:11.5px; color:var(--ink-faint);}
+.download-item .btn{margin-left:auto;}
+.order-id-box{background:var(--bg-soft); border-radius:10px; padding:14px 18px; font-family:var(--sans); font-size:13px; margin-bottom:30px; display:inline-flex; gap:8px;}
+
+/* ===== Auth Modal ===== */
+.modal-overlay{position:fixed; inset:0; background:rgba(11,18,32,.5); z-index:198; display:flex; align-items:center; justify-content:center; padding:20px; opacity:0; pointer-events:none; transition:opacity .2s;}
+.modal-overlay.open{opacity:1; pointer-events:auto;}
+.modal-box{background:#fff; border-radius:18px; padding:36px; width:100%; max-width:400px; position:relative; box-shadow:var(--shadow-lg);}
+.modal-close{position:absolute; top:16px; right:16px; background:none; border:none; font-size:20px; color:var(--ink-faint);}
+.modal-box h3{font-family:var(--serif); font-size:22px; margin-bottom:6px;}
+.modal-box p.sub{color:var(--ink-faint); font-size:13.5px; margin-bottom:22px;}
+.field{margin-bottom:14px;}
+.modal-tabs{display:flex; gap:4px; background:var(--bg-soft); border-radius:10px; padding:4px; margin-bottom:22px;}
+.modal-tab{flex:1; text-align:center; padding:9px; border-radius:8px; font-size:13px; font-weight:600; color:var(--ink-faint); background:none; border:none;}
+.modal-tab.active{background:#fff; color:var(--ink); box-shadow:var(--shadow-sm);}
+
+/* ===== Toast ===== */
+.toast{position:fixed; bottom:26px; left:50%; transform:translateX(-50%) translateY(20px); background:var(--ink); color:#fff; padding:14px 22px; border-radius:10px; font-size:13.5px; font-weight:500; z-index:200; opacity:0; pointer-events:none; transition:all .25s; display:flex; align-items:center; gap:10px;}
+.toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+/* ===== Admin ===== */
+.admin-layout{display:grid; grid-template-columns:230px 1fr; min-height:calc(100vh - 200px);}
+@media (max-width:860px){.admin-layout{grid-template-columns:1fr; }}
+.admin-side{background:var(--ink); color:#B9C0CC; padding:26px 16px;}
+@media (max-width:860px){.admin-side{display:flex; overflow-x:auto; gap:6px; padding:14px 16px;}}
+.admin-side .a-title{color:#fff; font-family:var(--serif); font-size:16px; margin-bottom:20px; padding:0 8px;}
+@media (max-width:860px){.admin-side .a-title{display:none;}}
+.admin-link{display:flex; align-items:center; gap:10px; padding:11px 12px; border-radius:8px; font-size:13.5px; font-weight:500; margin-bottom:2px; white-space:nowrap;}
+.admin-link:hover{background:#1a2436;}
+.admin-link.active{background:var(--accent); color:#fff;}
+.admin-main{padding:36px; background:var(--bg-soft); min-height:100%;}
+@media (max-width:600px){.admin-main{padding:20px;}}
+.admin-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:26px; flex-wrap:wrap; gap:14px;}
+.admin-head h2{font-family:var(--serif); font-size:24px;}
+.kpi-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-bottom:32px;}
+@media (max-width:860px){.kpi-grid{grid-template-columns:1fr 1fr;}}
+.kpi-card{background:#fff; border:1px solid var(--line); border-radius:14px; padding:20px;}
+.kpi-card span{font-size:12.5px; color:var(--ink-faint); display:block; margin-bottom:8px;}
+.kpi-card b{font-family:var(--serif); font-size:26px; display:block;}
+.kpi-card .delta{font-size:12px; color:var(--green); font-weight:600;}
+.admin-table-box{background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; margin-bottom:26px;}
+table{width:100%; border-collapse:collapse; font-size:13.5px;}
+table th{text-align:left; padding:14px 18px; background:var(--bg-soft); font-size:11.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-faint); border-bottom:1px solid var(--line);}
+table td{padding:14px 18px; border-bottom:1px solid var(--line); vertical-align:middle;}
+table tr:last-child td{border-bottom:none;}
+.tbl-thumb{width:36px; height:46px; border-radius:5px; overflow:hidden; background:var(--bg-soft); flex-shrink:0;}
+.tbl-prod{display:flex; align-items:center; gap:12px;}
+.status-pill{font-size:11px; font-weight:700; padding:4px 10px; border-radius:999px; text-transform:capitalize;}
+.status-pill.completed{background:#E9F3EE; color:var(--green);}
+.status-pill.pending{background:#FCF1DE; color:var(--accent-dark);}
+.status-pill.active{background:#E9F3EE; color:var(--green);}
+.status-pill.draft{background:#EDEDED; color:var(--ink-faint);}
+.row-actions{display:flex; gap:8px;}
+.row-actions button{background:none; border:1px solid var(--line); border-radius:6px; padding:6px 10px; font-size:11.5px; font-weight:600;}
+.row-actions button:hover{border-color:var(--ink);}
+.row-actions button.danger:hover{border-color:#B33A3A; color:#B33A3A;}
+
+.admin-modal-overlay{position:fixed; inset:0; background:rgba(11,18,32,.5); z-index:198; display:flex; align-items:center; justify-content:center; padding:20px; opacity:0; pointer-events:none; transition:opacity .2s;}
+.admin-modal-overlay.open{opacity:1; pointer-events:auto;}
+.admin-modal{background:#fff; border-radius:18px; padding:32px; width:100%; max-width:560px; max-height:88vh; overflow-y:auto; box-shadow:var(--shadow-lg); position:relative;}
+.admin-modal h3{font-family:var(--serif); font-size:20px; margin-bottom:22px;}
+.upload-box{border:1.5px dashed var(--line-2); border-radius:10px; padding:22px; text-align:center; color:var(--ink-faint); font-size:12.5px; margin-bottom:14px; background:var(--bg-soft);}
+
+.empty-hint{padding:40px; text-align:center; color:var(--ink-faint); font-size:13.5px;}
+
+/* ===== Online Resume Editor ===== */
+.editor-shell{background:#eef0f3;min-height:calc(100vh - 120px);padding:28px 0 50px;}
+.editor-toolbar{position:sticky;top:74px;z-index:45;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:22px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:var(--shadow-md);flex-wrap:wrap;}
+.editor-toolbar .tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.editor-toolbar .hint{font-size:12px;color:var(--ink-faint);}
+.resume-stage{display:flex;justify-content:center;overflow:auto;padding:8px;}
+.resume-page{width:794px;min-height:1123px;background:#fff;color:#111;padding:42px 46px 38px;box-shadow:0 12px 35px rgba(0,0,0,.15);font-family:Georgia,"Times New Roman",serif;}
+.r-head{text-align:center;margin-bottom:13px;}
+.r-name{font-size:31px;line-height:1.05;font-weight:700;letter-spacing:.5px;margin-bottom:7px;}
+.r-contact{font-size:12px;line-height:1.35;}
+.r-contact span{display:inline-block;}
+.r-section{margin-top:12px;}
+.r-title{font-size:17px;line-height:1.1;letter-spacing:1.2px;text-transform:uppercase;border-bottom:1px solid #777;padding-bottom:3px;margin-bottom:7px;font-weight:700;}
+.r-summary{font-size:11.5px;line-height:1.25;}
+.r-entry{position:relative;margin:7px 0 8px;padding-left:16px;}
+.r-entry-head{display:flex;justify-content:space-between;gap:15px;font-size:12px;line-height:1.2;font-weight:700;}
+.r-entry-sub{display:flex;justify-content:space-between;gap:15px;font-size:11.5px;line-height:1.25;font-style:italic;margin-top:1px;}
+.r-bullets{margin:3px 0 0 14px;padding-left:11px;font-size:11.3px;line-height:1.22;}
+.r-bullets li{margin:2px 0;}
+.r-project,.r-skill,.r-cert{font-size:11.5px;line-height:1.25;margin:3px 0;}
+.r-project strong,.r-skill strong,.r-cert strong{font-weight:700;}
+.r-actions{display:none;position:absolute;left:-14px;top:0;gap:3px;}
+.resume-page.editor-mode .r-entry:hover .r-actions,
+.resume-page.editor-mode .r-project-wrap:hover .r-actions,
+.resume-page.editor-mode .r-cert-wrap:hover .r-actions{display:flex;}
+.r-actions button{border:1px solid #bbb;background:#fff;border-radius:4px;font:11px Arial;padding:2px 5px;cursor:pointer;}
+.r-add{display:none;margin:4px 0 0 16px;border:1px dashed #aaa;background:#fafafa;padding:3px 8px;border-radius:5px;font:10px Arial;cursor:pointer;}
+.resume-page.editor-mode .r-add{display:inline-block;}
+[contenteditable="true"]{outline:none;border-radius:3px;}
+.resume-page.editor-mode [contenteditable="true"]:hover{background:#fff8df;box-shadow:0 0 0 1px #e6d29c;}
+.resume-page.editor-mode [contenteditable="true"]:focus{background:#fffdf3;box-shadow:0 0 0 2px var(--accent-soft);}
+.editor-side-note{font-size:12px;color:var(--ink-faint);margin-top:10px;text-align:center;}
+.editor-select{border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:#fff;font-size:12px;}
+@media(max-width:850px){
+  .resume-stage{justify-content:flex-start;}
+  .resume-page{transform-origin:top left;}
+}
+@media print{
+  body>*{display:none!important;}
+  #app{display:block!important;}
+  #app>*{display:block!important;}
+  .editor-shell{background:#fff!important;padding:0!important;}
+  .editor-toolbar,.editor-side-note{display:none!important;}
+  .resume-stage{padding:0!important;display:block!important;overflow:visible!important;}
+  .resume-page{width:210mm!important;min-height:297mm!important;box-shadow:none!important;margin:0!important;padding:11mm 12mm 9mm!important;}
+  .r-actions,.r-add{display:none!important;}
+  @page{size:A4;margin:0;}
+}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">🎓 <strong>Back-to-campus sale</strong> — 20% off all templates with code <strong>FRESHER20</strong></div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#/" class="logo"><span class="mark"></span>ResumeCraft</a>
+    <nav class="navlinks" id="navlinks">
+      <div class="navdrop">
+        <button>Templates <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></button>
+        <div class="navdrop-menu">
+          <a href="#/shop">All Templates</a>
+          <a href="#/shop?cat=IT %26 Software">IT & Software</a>
+          <a href="#/shop?cat=Business %26 MBA">Business & MBA</a>
+          <a href="#/shop?cat=Students %26 Freshers">Students & Freshers</a>
+        </div>
+      </div>
+      <a href="#/categories">Categories</a>
+      <a href="#/editor/9999">Resume Editor</a>
+      <a href="#/bundles">Bundles</a>
+      <a href="#/shop?free=1">Free Templates</a>
+      <a href="#/blog">Blog</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="text" id="headerSearch" placeholder="Search templates...">
+      </div>
+      <button class="btn-icon" id="loginBtn" title="Login" aria-label="Login">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="cart-btn" id="cartBtn">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="21" r="1.4" fill="currentColor"/><circle cx="18" cy="21" r="1.4" fill="currentColor"/></svg>
+        Cart <span class="cart-badge" id="cartCount">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main id="app"></main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="foot-logo"><span class="mark" style="width:26px;height:26px;"></span>ResumeCraft</div>
+        <p>Professionally designed, ATS-friendly resume templates trusted by students and professionals in 40+ countries.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M8 10v7M8 7.5v.01M12 17v-4.5c0-1.5 1-2.5 2.5-2.5S17 11 17 12.5V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M9.5 17c1-4 1-8 3-8s2 2.5 1 4.5c-.7 1.4.3 3 1.8 2.3 2-1 2.5-6.3-1.3-7.3-4-1-6.5 2-6 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+        </div>
+      </div>
+      <div><h6>Company</h6><ul><li><a href="#/about">About</a></li><li><a href="#/contact">Contact</a></li><li><a href="#/blog">Blog</a></li><li><a href="#/admin">Admin Dashboard</a></li></ul></div>
+      <div><h6>Support</h6><ul><li><a href="#/faq">FAQ</a></li><li><a href="#/contact">Contact Us</a></li><li><a href="#/refund-policy">Refund Policy</a></li><li><a href="#/terms">Terms of Service</a></li><li><a href="mailto:resumecraft.support@gmail.com">Email Support</a></li></ul></div>
+      <div><h6>Shop</h6><ul><li><a href="#/shop">All Templates</a></li><li><a href="#/bundles">Bundles</a></li><li><a href="#/shop?free=1">Free Templates</a></li><li><a href="#/categories">Categories</a></li></ul></div>
+      <div><h6>Get updates</h6><p style="font-size:13px;margin-bottom:12px;">New templates &amp; career tips, monthly.</p>
+        <div style="display:flex;gap:8px;"><input type="email" placeholder="Email" style="flex:1;min-width:0;border-radius:8px;border:1px solid #2A3549;background:#111A2B;color:#fff;padding:9px 10px;font-size:12.5px;"><button class="btn btn-accent btn-sm" style="padding:9px 14px;">Join</button></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 ResumeCraft. All rights reserved.</span>
+      <span>Made for job seekers everywhere 🌍</span>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="cartOverlay"></div>
+<div class="drawer" id="cartDrawer" role="dialog" aria-label="Shopping cart">
+  <div class="drawer-head"><h4>Your Cart</h4><button class="drawer-close" id="cartClose">×</button></div>
+  <div class="drawer-items" id="cartItems"></div>
+  <div class="drawer-foot" id="cartFoot"></div>
+</div>
+
+<div class="modal-overlay" id="loginModal">
+  <div class="modal-box">
+    <button class="modal-close" id="loginClose">×</button>
+    <div class="modal-tabs">
+      <button class="modal-tab active" data-tab="login">Log In</button>
+      <button class="modal-tab" data-tab="signup">Sign Up</button>
+    </div>
+    <div id="loginTabLogin">
+      <h3>Welcome back</h3>
+      <p class="sub">Log in to access your downloads and order history.</p>
+      <div class="field"><label>Email</label><input type="email" placeholder="you@example.com"></div>
+      <div class="field"><label>Password</label><input type="password" placeholder="••••••••"></div>
+      <button class="btn btn-dark btn-block" id="loginSubmit">Log In</button>
+    </div>
+    <div id="loginTabSignup" style="display:none;">
+      <h3>Create an account</h3>
+      <p class="sub">Save your templates and track your orders.</p>
+      <div class="field"><label>Full name</label><input type="text" placeholder="Jane Doe"></div>
+      <div class="field"><label>Email</label><input type="email" placeholder="you@example.com"></div>
+      <div class="field"><label>Password</label><input type="password" placeholder="Create a password"></div>
+      <button class="btn btn-dark btn-block" id="signupSubmit">Create Account</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* =========================================================
+   RESUMECRAFT — SPA (vanilla JS, hash router, in-memory state)
+   ========================================================= */
+
+/* ---------- Sample data ---------- */
+const CATEGORIES = [
+  {id:'det', name:'DET', icon:'gear', count:0},
+  {id:'get', name:'GET', icon:'gear', count:0},
+  {id:'pget', name:'PGET', icon:'brief', count:0},
+  {id:'sde', name:'SDE', icon:'code', count:0},
+  {id:'sde1', name:'SDE-1', icon:'code', count:0},
+  {id:'sde2', name:'SDE-2', icon:'code', count:0},
+  {id:'mt', name:'Management Trainee', icon:'brief', count:0},
+  {id:'intern', name:'Internship', icon:'cap', count:0},
+  {id:'fresher', name:'Fresher', icon:'cap', count:0},
+  {id:'mech-design', name:'Mechanical Design Engineer', icon:'gear', count:0},
+  {id:'manufacturing', name:'Manufacturing Engineer', icon:'gear', count:0},
+  {id:'production', name:'Production Engineer', icon:'gear', count:0},
+  {id:'quality', name:'Quality Engineer', icon:'star', count:0},
+  {id:'cnc', name:'CNC Programmer', icon:'gear', count:0},
+  {id:'data-analyst', name:'Data Analyst', icon:'chart', count:0},
+  {id:'data-scientist', name:'Data Scientist', icon:'chart', count:0},
+  {id:'software-engineer', name:'Software Engineer', icon:'code', count:0},
+  {id:'frontend', name:'Frontend Developer', icon:'code', count:0},
+  {id:'backend', name:'Backend Developer', icon:'code', count:0},
+  {id:'fullstack', name:'Full Stack Developer', icon:'code', count:0},
+  {id:'devops', name:'DevOps Engineer', icon:'code', count:0},
+  {id:'business-analyst', name:'Business Analyst', icon:'chart', count:0},
+];
+
+const PALETTES = ['#B8863B','#2F6E52','#0B1220','#8E6425','#3D5A80','#6B4226'];
+const LAYOUTS = ['sidebar-left','sidebar-right','header-band','minimal'];
+
+function seedProducts(){
+  const names = {
+    det:['DET Professional Resume','DET Mechanical Resume'],
+    get:['GET Professional Resume','GET Mechanical Resume'],
+    pget:['PGET Professional Resume'],
+    sde:['SDE Software Engineer Resume','SDE ATS Resume'],
+    sde1:['SDE-1 Software Engineer Resume','SDE-1 ATS Resume'],
+    sde2:['SDE-2 Software Engineer Resume'],
+    mt:['Management Trainee Resume','MT ATS Resume'],
+    intern:['Internship Resume','Internship ATS Resume'],
+    fresher:['Fresher Resume','Graduate Fresher Resume'],
+    'mech-design':['Mechanical Design Engineer Resume','CAD Design Engineer Resume'],
+    manufacturing:['Manufacturing Engineer Resume'],
+    production:['Production Engineer Resume'],
+    quality:['Quality Engineer Resume'],
+    cnc:['CNC Programmer Resume','CNC/CAM Programmer Resume'],
+    'data-analyst':['Data Analyst Resume','BI Data Analyst Resume'],
+    'data-scientist':['Data Scientist Resume'],
+    'software-engineer':['Software Engineer Resume'],
+    frontend:['Frontend Developer Resume'],
+    backend:['Backend Developer Resume'],
+    fullstack:['Full Stack Developer Resume'],
+    devops:['DevOps Engineer Resume'],
+    'business-analyst':['Business Analyst Resume'],
+  };
+  let id=1; const out=[];
+  CATEGORIES.forEach((cat,ci)=>{
+    (names[cat.id]||[`${cat.name} Professional Resume`]).forEach((n,ni)=>{
+      out.push({
+        id:id++, name:n, categoryId:cat.id, category:cat.name,
+        price:49, was:null,
+        rating:(4.7+((ni+ci)%4)*0.1).toFixed(1), reviews: 20+((ni*7+ci*13)%180),
+        free:false, ats: 92+((ni+ci*3)%8),
+        palette: PALETTES[(id+ci)%PALETTES.length],
+        layout: LAYOUTS[(id+ni)%LAYOUTS.length],
+        status:'active', sold: 10+((id*17)%190),
+        desc:`A professionally structured ${cat.name} resume template designed for recruiters and applicant tracking systems. Clear hierarchy, strong keyword placement, and an easy-to-edit layout.`,
+        formats:['.docx','.pdf','Canva link'],
+        includes:['1 resume template','Matching cover letter template','Editing guide (PDF)','Font & icon pack','Free lifetime updates'],
+      });
+    });
+  });
+  return out;
+}
+
+const STATE = {
+  products: seedProducts(),
+  categories: CATEGORIES,
+  cart: [],
+  coupon: null,
+  orders: [],
+  customers: [
+    {id:1,name:'Amara Okafor',email:'amara.o@example.com',orders:2,spent:98,joined:'2026-03-11'},
+    {id:2,name:'Rahul Mehta',email:'rahul.m@example.com',orders:1,spent:49,joined:'2026-04-02'},
+    {id:3,name:'Sofia Torres',email:'sofia.t@example.com',orders:3,spent:147,joined:'2026-02-19'},
+    {id:4,name:'Daniel Kim',email:'daniel.k@example.com',orders:1,spent:49,joined:'2026-05-27'},
+  ],
+  coupons: [
+    {code:'FRESHER20', type:'percent', value:20, active:true},
+    {code:'WELCOME10', type:'percent', value:10, active:true},
+    {code:'SAVE5', type:'flat', value:5, active:false},
+  ],
+  view:{ tpl:0 },
+};
+
+/* Online editable template based on the uploaded Classic ATS resume PDF. */
+const EDITOR_PRODUCT_ID = 9999;
+STATE.products.push({
+  id:EDITOR_PRODUCT_ID,
+  name:'Classic ATS Resume — Online Editable',
+  categoryId:'fresher',
+  category:'Fresher',
+  price:49, was:null, rating:'5.0', reviews:0, free:false, ats:98,
+  palette:'#111111', layout:'minimal', status:'active', sold:0,
+  desc:'A clean, one-page ATS-friendly resume based on the Classic ATS layout. Edit every field directly in your browser and print/save as PDF.',
+  formats:['Online Editor','.pdf'],
+  includes:['1-page ATS resume','Direct in-browser editing','Print / Save as PDF']
+});
+STATE.categories.forEach(c => c.count = STATE.products.filter(p=>p.categoryId===c.id).length);
+
+
+const BUNDLE = {
+  name:'The Career Starter Bundle', price:49, was:null,
+  items:['10 Resume Templates (all categories)','5 Matching Cover Letter Templates','ATS-friendly plain-text versions','40-page Resume & Interview Guide'],
+};
+
+const TESTIMONIALS = [
+  {name:'Amara O.', role:'Marketing Coordinator', initials:'AO', color:'#B8863B', rating:5, quote:"Landed 3 interviews in my first week using the Digital Marketer template. It's clean and actually passed every ATS scanner I tried.", verified:true},
+  {name:'Rahul M.', role:'Final-year student', initials:'RM', color:'#2F6E52', rendered:true, rating:5, quote:'As a fresher I had zero idea how to format a resume. The Campus Placement template made me look ten times more put-together.', verified:true},
+  {name:'Sofia T.', role:'Financial Analyst', initials:'ST', color:'#3D5A80', rating:4.5, quote:'Editing in Canva was genuinely painless — swapped colors and fonts in ten minutes. Would like a couple more finance-specific layouts though.', verified:true},
+];
+
+const FAQS = [
+  {q:'What file formats do I get?', a:'Every template includes an editable Microsoft Word (.docx) file, a print-ready PDF, and a Canva template link, so you can edit in whichever tool you\'re comfortable with.'},
+  {q:'Can I edit the templates myself?', a:'Yes — all templates are fully editable. Swap in your own text, adjust colors and fonts, and rearrange sections using Word or Canva. No design experience required.'},
+  {q:'Do these work with Canva and Microsoft Word?', a:'Every template is built for both platforms from the start, so formatting stays consistent whether you open it in Word or Canva.'},
+  {q:'How do I download my template after buying?', a:'Right after checkout you\'ll land on a confirmation page with direct download links, and a copy is also sent to your email.'},
+  {q:'What is your refund policy?', a:'Because these are instant-download digital files, we generally don\'t offer refunds once a file has been downloaded. If a file is corrupted or doesn\'t match its description, contact resumecraft.support@gmail.com within 7 days for a replacement or refund.'},
+  {q:'Can I use these templates for commercial purposes?', a:'Templates are licensed for personal job-search use. If you\'re a career coach or agency wanting to use templates with multiple clients, reach out for a commercial license.'},
+];
+
+/* ---------- Helpers ---------- */
+const $ = sel => document.querySelector(sel);
+const $$ = sel => Array.from(document.querySelectorAll(sel));
+function money(n){ return '₹'+Number(n).toFixed(2).replace(/\.00$/,''); }
+function findProduct(id){ return STATE.products.find(p=>p.id===Number(id)); }
+
+function starsHTML(rating, reviews){
+  const full = Math.floor(rating), half = rating%1>=0.4;
+  let s='';
+  for(let i=0;i<5;i++){
+    if(i<full) s+='★'; else if(i===full && half) s+='⯨'; else s+='☆';
+  }
+  return `<span class="stars">${s} <span class="n">${rating}${reviews?` (${reviews})`:''}</span></span>`;
+}
+
+function atsRingSVG(score){
+  const r=17, c=2*Math.PI*r, off=c*(1-score/100);
+  return `<svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="${r}" fill="none" stroke="#EDEBE3" stroke-width="4"/>
+  <circle cx="22" cy="22" r="${r}" fill="none" stroke="#B8863B" stroke-width="4" stroke-linecap="round"
+  stroke-dasharray="${c}" stroke-dashoffset="${off}" transform="rotate(-90 22 22)"/></svg>`;
+}
+
+/* Illustrated resume mockup SVG generator — signature visual element */
+function resumeSVG(p, big){
+  const c = p.palette; const layout = p.layout;
+  const W=300,H=400;
+  let bodyLines = '';
+  const lineColor = '#DADADA';
+  function lines(x,y,w,n,gap=13){let s='';for(let i=0;i<n;i++){s+=`<rect x="${x}" y="${y+i*gap}" width="${i%3===2? w*0.6:w}" height="4" rx="2" fill="${lineColor}"/>`;}return s;}
+  if(layout==='sidebar-left'){
+    bodyLines = `
+      <rect x="0" y="0" width="${W}" height="${H}" fill="#fff"/>
+      <rect x="0" y="0" width="95" height="${H}" fill="${c}"/>
+      <circle cx="47" cy="60" r="26" fill="#fff" opacity="0.85"/>
+      ${lines(20,110,60,3,10).replace(/fill="[^"]+"/g,'fill="#fff" opacity="0.85"')}
+      <rect x="20" y="160" width="55" height="8" rx="2" fill="#fff" opacity="0.6"/>
+      ${lines(20,180,60,6,10).replace(/fill="[^"]+"/g,'fill="#fff" opacity="0.5"')}
+      <rect x="130" y="34" width="140" height="14" rx="3" fill="#1a1a1a"/>
+      <rect x="130" y="54" width="90" height="8" rx="2" fill="${c}"/>
+      ${lines(130,90,140,4)}
+      <rect x="130" y="160" width="70" height="9" rx="2" fill="#1a1a1a"/>
+      ${lines(130,180,140,6)}
+      <rect x="130" y="270" width="70" height="9" rx="2" fill="#1a1a1a"/>
+      ${lines(130,290,140,5)}
+    `;
+  } else if(layout==='sidebar-right'){
+    bodyLines = `
+      <rect x="0" y="0" width="${W}" height="${H}" fill="#fff"/>
+      <rect x="205" y="0" width="95" height="${H}" fill="${c}"/>
+      <rect x="30" y="34" width="140" height="14" rx="3" fill="#1a1a1a"/>
+      <rect x="30" y="54" width="90" height="8" rx="2" fill="${c}"/>
+      ${lines(30,90,150,4)}
+      <rect x="30" y="160" width="70" height="9" rx="2" fill="#1a1a1a"/>
+      ${lines(30,180,150,6)}
+      <rect x="30" y="270" width="70" height="9" rx="2" fill="#1a1a1a"/>
+      ${lines(30,290,150,5)}
+      <circle cx="252" cy="60" r="26" fill="#fff" opacity="0.85"/>
+      ${lines(225,110,55,3,10).replace(/fill="[^"]+"/g,'fill="#fff" opacity="0.85"')}
+      <rect x="225" y="160" width="55" height="8" rx="2" fill="#fff" opacity="0.6"/>
+      ${lines(225,180,55,6,10).replace(/fill="[^"]+"/g,'fill="#fff" opacity="0.5"')}
+    `;
+  } else if(layout==='header-band'){
+    bodyLines = `
+      <rect x="0" y="0" width="${W}" height="${H}" fill="#fff"/>
+      <rect x="0" y="0" width="${W}" height="90" fill="${c}"/>
+      <rect x="30" y="30" width="150" height="15" rx="3" fill="#fff"/>
+      <rect x="30" y="55" width="100" height="9" rx="2" fill="#fff" opacity="0.7"/>
+      <rect x="30" y="120" width="70" height="9" rx="2" fill="#1a1a1a"/>
+      ${lines(30,140,240,4)}
+      <rect x="30" y="220" width="70" height="9" rx="2" fill="#1a1a1a"/>
+      ${lines(30,240,240,5)}
+      <rect x="30" y="320" width="70" height="9" rx="2" fill="#1a1a1a"/>
+      ${lines(30,340,240,3)}
+    `;
+  } else {
+    bodyLines = `
+      <rect x="0" y="0" width="${W}" height="${H}" fill="#fff"/>
+      <rect x="0" y="0" width="${W}" height="${H}" fill="none"/>
+      <rect x="${W/2-70}" y="34" width="140" height="14" rx="3" fill="#1a1a1a"/>
+      <rect x="${W/2-45}" y="54" width="90" height="8" rx="2" fill="${c}"/>
+      <line x1="30" y1="80" x2="270" y2="80" stroke="${c}" stroke-width="2"/>
+      <rect x="30" y="100" width="70" height="9" rx="2" fill="#1a1a1a"/>
+      ${lines(30,120,240,4)}
+      <rect x="30" y="200" width="70" height="9" rx="2" fill="#1a1a1a"/>
+      ${lines(30,220,240,5)}
+      <rect x="30" y="300" width="70" height="9" rx="2" fill="#1a1a1a"/>
+      ${lines(30,320,240,3)}
+    `;
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">${bodyLines}</svg>`;
+}
+
+function toast(msg){
+  const t = $('#toast'); if(!t) return; t.textContent = msg; t.classList.add('show');
+  clearTimeout(toast._tm); toast._tm = setTimeout(()=>t.classList.remove('show'), 2200);
+}
+
+/* ---------- Cart ---------- */
+function addToCart(id){
+  const p = findProduct(id);
+  if(STATE.cart.find(c=>c.id===id)){ toast('Already in your cart'); openCart(); return; }
+  STATE.cart.push(p);
+  renderCart(); openCart();
+  toast(`${p.name} added to cart`);
+}
+function removeFromCart(id){
+  STATE.cart = STATE.cart.filter(c=>c.id!==id);
+  renderCart();
+}
+function cartTotals(){
+  const subtotal = STATE.cart.reduce((s,i)=>s+i.price,0);
+  let discount = 0;
+  if(STATE.coupon){
+    discount = STATE.coupon.type==='percent' ? subtotal*STATE.coupon.value/100 : Math.min(STATE.coupon.value, subtotal);
+  }
+  return { subtotal, discount, total: Math.max(0, subtotal-discount) };
+}
+function renderCart(){
+  const countEl=$('#cartCount'), itemsEl=$('#cartItems'), footEl=$('#cartFoot');
+  if(!itemsEl || !footEl) return;
+  if(countEl) countEl.textContent = STATE.cart.length;
+  if(STATE.cart.length===0){
+    itemsEl.innerHTML = `<div class="drawer-empty">Your cart is empty.<br><br><a href="#/shop" class="btn btn-dark btn-sm" id="cartEmptyBrowse">Browse Templates</a></div>`;
+    footEl.innerHTML = '';
+    const b = $('#cartEmptyBrowse'); if(b) b.addEventListener('click', closeCart);
+    return;
+  }
+  itemsEl.innerHTML = STATE.cart.map(item=>`
+    <div class="drawer-item">
+      <div class="thumb">${resumeSVG(item)}</div>
+      <div class="info">
+        <b>${item.name}</b>
+        <span>${item.category}</span>
+        <a class="remove" data-remove="${item.id}">Remove</a>
+      </div>
+      <div class="price">${money(item.price)}</div>
+    </div>
+  `).join('');
+  const t = cartTotals();
+  footEl.innerHTML = `
+    <div class="coupon-row">
+      <input type="text" id="couponInput" placeholder="Coupon code" value="${STATE.coupon?STATE.coupon.code:''}">
+      <button class="btn btn-ghost btn-sm" id="applyCoupon">Apply</button>
+    </div>
+    <div id="couponMsg"></div>
+    <div class="drawer-totals">
+      <div class="row"><span>Subtotal</span><span>${money(t.subtotal)}</span></div>
+      ${t.discount>0?`<div class="row" style="color:var(--green)"><span>Discount</span><span>-${money(t.discount)}</span></div>`:''}
+      <div class="row grand"><span>Total</span><span>${money(t.total)}</span></div>
+    </div>
+    <a href="#/checkout" class="btn btn-dark btn-block" id="goCheckout">Checkout</a>
+  `;
+  itemsEl.querySelectorAll('[data-remove]').forEach(el=>el.addEventListener('click', ()=>removeFromCart(Number(el.dataset.remove))));
+  $('#applyCoupon').addEventListener('click', tryApplyCoupon);
+  $('#goCheckout').addEventListener('click', closeCart);
+}
+function tryApplyCoupon(){
+  const code = $('#couponInput').value.trim().toUpperCase();
+  const found = STATE.coupons.find(c=>c.code===code && c.active);
+  const msg = $('#couponMsg');
+  if(!code){ return; }
+  if(found){
+    STATE.coupon = found;
+    msg.innerHTML = `<div class="coupon-msg ok">✓ "${found.code}" applied — ${found.type==='percent'?found.value+'% off':money(found.value)+' off'}</div>`;
+  } else {
+    STATE.coupon = null;
+    msg.innerHTML = `<div class="coupon-msg err">✕ Invalid or expired code</div>`;
+  }
+  renderCart();
+  setTimeout(()=>{ const m=$('#couponMsg'); if(m) m.innerHTML = found? `<div class="coupon-msg ok">✓ "${found.code}" applied</div>` : `<div class="coupon-msg err">✕ Invalid or expired code</div>`; },0);
+}
+function openCart(){ const d=$('#cartDrawer'), o=$('#cartOverlay'); if(d) d.classList.add('open'); if(o) o.classList.add('open'); }
+function closeCart(){ const d=$('#cartDrawer'), o=$('#cartOverlay'); if(d) d.classList.remove('open'); if(o) o.classList.remove('open'); }
+/* Global UI bindings are initialized by initApp() below. */
+
+/* =========================================================
+   ICONS (small inline set)
+   ========================================================= */
+const ICONS = {
+  gear:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+  code:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  brief:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="2"/></svg>',
+  cap:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 4L2 9l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5" stroke="currentColor" stroke-width="2"/></svg>',
+  cross:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>',
+  chart:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M12 20V4M20 20v-7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>',
+  coin:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v10M9.5 9.5c0-1 1-1.8 2.5-1.8s2.5.8 2.5 1.8-1 1.3-2.5 1.8-2.5.9-2.5 1.9 1 1.8 2.5 1.8 2.5-.8 2.5-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
+  star:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L12 16.8 6.5 19.8l1.4-6.2-4.7-4.2 6.2-.6L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>',
+  check:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  bolt:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>',
+  edit:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-3-3L5 17v3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>',
+  download:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  badge:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="6" stroke="currentColor" stroke-width="2"/><path d="M9 14l-2 7 5-3 5 3-2-7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>',
+  file:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 2h9l5 5v15H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>',
+  dashboard:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="9" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="5" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="12" width="7" height="9" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="3" y="16" width="7" height="5" rx="1.5" stroke="currentColor" stroke-width="2"/></svg>',
+  box:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 8l-9-5-9 5 9 5 9-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3 8v8l9 5 9-5V8M12 13v8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>',
+  cart:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  users:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M2.5 20c1-4 3.5-6 6.5-6s5.5 2 6.5 6M16 8.5a3 3 0 1 1 3.5 3M15 14.5c2.5.3 4.5 2 5.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+  tag:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 12L12.5 4.5 4 5l-.5 8.5L11 21z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="9" r="1.4" fill="currentColor"/></svg>',
+  percent:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="7" cy="7" r="2.5" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="17" r="2.5" stroke="currentColor" stroke-width="2"/><path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+};
+
+/* =========================================================
+   PAGE RENDERERS
+   ========================================================= */
+function productCard(p){
+  return `
+  <div class="card" data-goto="#/product/${p.id}">
+    <div class="tpl-thumb" data-goto="#/product/${p.id}">
+      ${resumeSVG(p)}
+      <div class="fold"></div>
+      <div class="ats-ring">${atsRingSVG(p.ats)}<span>${p.ats}%</span></div>
+      ${p.free ? `<div class="tpl-badge free">FREE</div>` : (p.was? `<div class="tpl-badge">SALE</div>`:'')}
+      <div class="tpl-quickview">Quick View →</div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">${p.category}</div>
+      <div class="card-title">${p.name}</div>
+      ${starsHTML(p.rating, p.reviews)}
+      <div class="card-foot">
+        <div class="price">${p.was?`<span class="was">${money(p.was)}</span>`:''}${p.free?'Free':money(p.price)}</div>
+        <span class="view-btn">View Template</span>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderHome(){
+  const popular = STATE.products.filter(p=>!p.free).sort((a,b)=>b.sold-a.sold).slice(0,8);
+  return `
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">${ICONS.bolt} Trusted by 40,000+ job seekers</div>
+        <h1>Professional resumes that help you <em>get noticed</em>.</h1>
+        <p class="lede">Modern, ATS-friendly resume templates designed for students, freshers and professionals — built to pass the scan and impress the recruiter.</p>
+        <div class="hero-ctas">
+          <a href="#/shop" class="btn btn-dark">Browse Templates</a>
+          <a href="#/shop?free=1" class="btn btn-outline">Get Free Template</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>320+</b><span>Templates</span></div>
+          <div><b>4.8★</b><span>Average rating</span></div>
+          <div><b>40k+</b><span>Downloads</span></div>
+          <div><b>98%</b><span>ATS pass rate</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hv-card back1">${resumeSVG(STATE.products[2])}</div>
+        <div class="hv-card back2">${resumeSVG(STATE.products[9])}</div>
+        <div class="hv-card main">${resumeSVG(STATE.products[5])}</div>
+        <div class="hv-badge"><div class="ring">${atsRingSVG(97)}</div><div><b>97% ATS Match</b><span>Recruiter-tested</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="trust-bar">
+    ${[['badge','ATS-friendly','Passes major applicant tracking systems'],['edit','Fully editable','Word, PDF & Canva versions included'],['download','Instant download','Get your files immediately after checkout'],['star','Professional designs','Crafted by resume &amp; hiring specialists']].map(([ic,t,s])=>`
+    <div class="trust-item"><div class="ic">${ICONS[ic]}</div><div><b>${t}</b><span>${s}</span></div></div>`).join('')}
+  </div></div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head section-head-row">
+        <div><div class="eyebrow">Best sellers</div><h2>Popular templates</h2><p>The resumes our customers download most, across every category.</p></div>
+        <a href="#/shop" class="btn btn-ghost btn-sm">View all →</a>
+      </div>
+      <div class="grid grid-4">${popular.map(productCard).join('')}</div>
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Browse</div><h2>Find your category</h2><p>Templates tailored to the way your industry actually hires.</p></div>
+      <div class="cat-grid">
+        ${STATE.categories.map(c=>`
+        <a href="#/shop?cat=${encodeURIComponent(c.name)}" class="cat-tile">
+          <div class="ic">${ICONS[c.icon]}</div>
+          <h4>${c.name}</h4>
+          <span>${c.count} templates</span>
+        </a>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head" style="text-align:center; margin-left:auto; margin-right:auto;"><div class="eyebrow" style="margin-left:auto;margin-right:auto;">Simple process</div><h2>How it works</h2></div>
+      <div class="steps">
+        ${[['01','Choose a template','Browse by role or industry and preview it instantly.'],
+           ['02','Purchase','Pay securely — cards, PayPal and more coming soon.'],
+           ['03','Download','Get your files immediately, no waiting.'],
+           ['04','Edit and apply','Personalize in Word or Canva and start applying.']]
+           .map(([n,t,s])=>`<div class="step"><div class="num">${n}</div><h4>${t}</h4><p>${s}</p></div>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="wrap">
+      <div class="bundle-box">
+        <div>
+          <span class="bundle-tag">Best value</span>
+          <h2>${BUNDLE.name}</h2>
+          <ul class="bundle-list">
+            ${BUNDLE.items.map(i=>`<li>${ICONS.check}${i}</li>`).join('')}
+          </ul>
+          <div class="bundle-price-row"><span class="now">${money(BUNDLE.price)}</span><span class="was">${money(BUNDLE.was)}</span><span class="save" style="background:rgba(184,134,59,.2);color:#E8C48A;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;">Save 62%</span></div>
+          <button class="btn btn-accent" id="bundleBuy">Get the Bundle</button>
+        </div>
+        <div class="bundle-visual">
+          <div class="bv-card" style="top:10px; left:20px; transform:rotate(-8deg); z-index:1;">${resumeSVG(STATE.products[0])}</div>
+          <div class="bv-card" style="top:40px; left:100px; transform:rotate(5deg); z-index:2;">${resumeSVG(STATE.products[4])}</div>
+          <div class="bv-card" style="top:15px; left:180px; transform:rotate(-3deg); z-index:3;">${resumeSVG(STATE.products[12])}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head" style="text-align:center; margin-left:auto;margin-right:auto;"><div class="eyebrow" style="margin-left:auto;margin-right:auto;">Reviews</div><h2>What customers say</h2><p style="margin-left:auto;margin-right:auto;">Real feedback from job seekers — this section is structured so genuine reviews can drop straight in.</p></div>
+      <div class="testi-grid">
+        ${TESTIMONIALS.map(t=>`
+        <div class="testi-card">
+          ${starsHTML(t.rating)}
+          <p class="quote">"${t.quote}"</p>
+          <div class="testi-person">
+            <div class="testi-avatar" style="background:${t.color}">${t.initials}</div>
+            <div><b>${t.name}</b><span>${t.role}</span>${t.verified?`<div class="testi-verified">${ICONS.check} Verified purchase</div>`:''}</div>
+          </div>
+        </div>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft" id="homeFaq">
+    <div class="wrap">
+      <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto;"><div class="eyebrow" style="margin-left:auto;margin-right:auto;">FAQ</div><h2>Common questions</h2></div>
+      <div class="faq-list">${FAQS.map((f,i)=>faqItem(f,i)).join('')}</div>
+    </div>
+  </section>
+  `;
+}
+
+function faqItem(f,i){
+  return `<div class="faq-item" data-faq="${i}">
+    <button class="faq-q">${f.q}<span class="plus">+</span></button>
+    <div class="faq-a"><p>${f.a}</p></div>
+  </div>`;
+}
+
+function bindFaq(){
+  $$('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click', ()=>{
+      const wasOpen = item.classList.contains('open');
+      item.parentElement.querySelectorAll('.faq-item').forEach(f=>f.classList.remove('open'));
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+}
+
+/* ---- Shop page ---- */
+function parseQuery(q){
+  const out={}; if(!q) return out;
+  q.replace(/^\?/,'').split('&').forEach(pair=>{
+    if(!pair) return; const [k,v] = pair.split('=');
+    out[decodeURIComponent(k)] = decodeURIComponent(v||'');
+  });
+  return out;
+}
+function renderShop(query){
+  const q = parseQuery(query);
+  let list = STATE.products.slice();
+  if(q.free) list = list.filter(p=>p.free);
+  if(q.cat) list = list.filter(p=>p.category===q.cat);
+  if(q.q) list = list.filter(p=>p.name.toLowerCase().includes(q.q.toLowerCase()) || p.category.toLowerCase().includes(q.q.toLowerCase()));
+  window._shopState = window._shopState || {sort:'popular', priceMax:30, cats: q.cat?[q.cat]:[]};
+  const st = window._shopState;
+  if(q.cat && !st.cats.includes(q.cat)) st.cats = [q.cat];
+
+  function applyFilters(){
+    let l = STATE.products.slice();
+    if(q.free) l = l.filter(p=>p.free);
+    if(q.q) l = l.filter(p=>p.name.toLowerCase().includes(q.q.toLowerCase()));
+    if(st.cats.length) l = l.filter(p=>st.cats.includes(p.category));
+    l = l.filter(p=> (p.free?0:p.price) <= st.priceMax);
+    if(st.sort==='price-asc') l.sort((a,b)=>(a.free?0:a.price)-(b.free?0:b.price));
+    else if(st.sort==='price-desc') l.sort((a,b)=>(b.free?0:b.price)-(a.free?0:a.price));
+    else if(st.sort==='rating') l.sort((a,b)=>b.rating-a.rating);
+    else l.sort((a,b)=>b.sold-a.sold);
+    return l;
+  }
+
+  const html = `
+  <div class="page-hero"><div class="wrap">
+    <div class="crumb"><a href="#/">Home</a> / ${q.free?'Free Templates':(q.cat||'All Templates')}</div>
+    <h1>${q.free?'Free Resume Templates':(q.cat?q.cat+' Templates':'All Resume Templates')}</h1>
+  </div></div>
+  <section style="padding-top:44px;">
+    <div class="wrap shop-layout">
+      <aside class="filter-box">
+        <h5>Category</h5>
+        <div class="filter-group" id="catFilters">
+          ${STATE.categories.map(c=>`
+          <label class="filter-opt"><input type="checkbox" value="${c.name}" ${st.cats.includes(c.name)?'checked':''}> ${c.name} <span class="count">${c.count}</span></label>`).join('')}
+        </div>
+        <h5>Max price</h5>
+        <div class="filter-group">
+          <input type="range" min="0" max="30" value="${st.priceMax}" id="priceRange" style="width:100%; accent-color:var(--accent);">
+          <div style="display:flex; justify-content:space-between; font-size:12.5px; color:var(--ink-faint); margin-top:6px;"><span>$0</span><span id="priceLabel">$${st.priceMax}</span></div>
+        </div>
+        <h5>Quick filters</h5>
+        <div class="price-range">
+          <div class="chip ${q.free?'active':''}" data-chip="free">Free only</div>
+          <div class="chip" data-chip="sale">On sale</div>
+        </div>
+      </aside>
+      <div>
+        <div class="shop-toolbar">
+          <span class="result-count" id="resultCount"></span>
+          <select id="sortSelect">
+            <option value="popular">Most popular</option>
+            <option value="rating">Top rated</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+        <div class="grid grid-4" id="shopGrid"></div>
+      </div>
+    </div>
+  </section>`;
+
+  setTimeout(()=>{
+    $('#sortSelect').value = st.sort;
+    function draw(){
+      const l = applyFilters();
+      $('#resultCount').textContent = `${l.length} template${l.length!==1?'s':''} found`;
+      $('#shopGrid').innerHTML = l.length ? l.map(productCard).join('') : `<div class="empty-state" style="grid-column:1/-1;">No templates match those filters.<br><br></div>`;
+      bindCardNav();
+    }
+    draw();
+    $('#sortSelect').addEventListener('change', e=>{ st.sort=e.target.value; draw(); });
+    $('#priceRange').addEventListener('input', e=>{ st.priceMax=Number(e.target.value); $('#priceLabel').textContent = '$'+st.priceMax; draw(); });
+    $$('#catFilters input').forEach(cb=>cb.addEventListener('change', ()=>{
+      st.cats = $$('#catFilters input:checked').map(c=>c.value); draw();
+    }));
+    $$('.chip').forEach(chip=>chip.addEventListener('click', ()=>{
+      if(chip.dataset.chip==='free'){ location.hash = '#/shop?free=1'; }
+      else { chip.classList.toggle('active'); draw(); }
+    }));
+  },0);
+
+  return html;
+}
+
+/* ---- Categories page ---- */
+function renderCategories(){
+  return `
+  <div class="page-hero"><div class="wrap"><div class="crumb"><a href="#/">Home</a> / Categories</div><h1>Browse by category</h1></div></div>
+  <section><div class="wrap">
+    <div class="cat-grid">
+      ${STATE.categories.map(c=>`
+      <a href="#/shop?cat=${encodeURIComponent(c.name)}" class="cat-tile">
+        <div class="ic">${ICONS[c.icon]}</div><h4>${c.name}</h4><span>${c.count} templates</span>
+      </a>`).join('')}
+    </div>
+  </div></section>`;
+}
+
+/* ---- Bundles page ---- */
+function renderBundles(){
+  return `
+  <div class="page-hero"><div class="wrap"><div class="crumb"><a href="#/">Home</a> / Bundles</div><h1>Template bundles</h1></div></div>
+  <section><div class="wrap">
+    <div class="bundle-box">
+      <div>
+        <span class="bundle-tag">Best value</span>
+        <h2>${BUNDLE.name}</h2>
+        <ul class="bundle-list">${BUNDLE.items.map(i=>`<li>${ICONS.check}${i}</li>`).join('')}</ul>
+        <div class="bundle-price-row"><span class="now">${money(BUNDLE.price)}</span><span class="was">${money(BUNDLE.was)}</span></div>
+        <button class="btn btn-accent" id="bundleBuy2">Get the Bundle</button>
+      </div>
+      <div class="bundle-visual">
+        <div class="bv-card" style="top:10px; left:20px; transform:rotate(-8deg); z-index:1;">${resumeSVG(STATE.products[1])}</div>
+        <div class="bv-card" style="top:40px; left:100px; transform:rotate(5deg); z-index:2;">${resumeSVG(STATE.products[6])}</div>
+        <div class="bv-card" style="top:15px; left:180px; transform:rotate(-3deg); z-index:3;">${resumeSVG(STATE.products[19])}</div>
+      </div>
+    </div>
+  </div></section>`;
+}
+
+/* ---- Blog page (stub) ---- */
+function renderBlog(){
+  const posts = [
+    {t:'10 Resume Mistakes That Get You Rejected by ATS', c:'Career Tips', d:'Aug 12, 2026'},
+    {t:'How to Write a Resume With Zero Work Experience', c:'Students', d:'Aug 5, 2026'},
+    {t:'Canva vs Word: Which Should You Edit Your Resume In?', c:'Guides', d:'Jul 28, 2026'},
+    {t:'The 6-Second Rule: Formatting for Busy Recruiters', c:'Design', d:'Jul 20, 2026'},
+  ];
+  return `
+  <div class="page-hero"><div class="wrap"><div class="crumb"><a href="#/">Home</a> / Blog</div><h1>Career &amp; resume tips</h1></div></div>
+  <section><div class="wrap"><div class="grid grid-3">
+    ${posts.map(p=>`<div class="card"><div class="tpl-thumb" style="aspect-ratio:16/10; display:flex; align-items:center; justify-content:center; background:var(--bg-soft);">${ICONS.file}</div>
+    <div class="card-body"><div class="card-cat">${p.c} · ${p.d}</div><div class="card-title" style="font-size:16.5px;">${p.t}</div><span class="view-btn">Read more →</span></div></div>`).join('')}
+  </div></div></section>`;
+}
+
+/* ---- Product detail ---- */
+function renderProduct(id){
+  const p = findProduct(id);
+  if(!p) return `<div class="empty-hint">Template not found.</div>`;
+  const related = STATE.products.filter(x=>x.categoryId===p.categoryId && x.id!==p.id).slice(0,4);
+  window._pdTab = window._pdTab || 'desc';
+  const html = `
+  <div class="page-hero"><div class="wrap"><div class="crumb"><a href="#/">Home</a> / <a href="#/shop">Templates</a> / ${p.category}</div><h1 style="font-size:20px;">${p.name}</h1></div></div>
+  <section><div class="wrap pd-grid">
+    <div>
+      <div class="pd-main-img" id="pdMainImg">${resumeSVG(p)}${p.free?`<div class="tpl-badge free" style="top:14px;left:14px;">FREE</div>`:''}</div>
+      <div class="pd-thumbs">
+        <div class="th active" data-i="0">${resumeSVG(p)}</div>
+        <div class="th" data-i="1">${resumeSVG({...p, layout: LAYOUTS[(p.id+1)%4]})}</div>
+        <div class="th" data-i="2">${resumeSVG({...p, layout: LAYOUTS[(p.id+2)%4]})}</div>
+      </div>
+    </div>
+    <div class="pd-info">
+      <div class="card-cat">${p.category}</div>
+      <h1>${p.name}</h1>
+      <div class="pd-rating-row">${starsHTML(p.rating, p.reviews)}<span style="font-size:12.5px;color:var(--ink-faint);">· ${p.sold} sold</span></div>
+      <div class="pd-price-row">
+        <span class="now">${p.free?'Free':money(p.price)}</span>
+        ${p.was?`<span class="was">${money(p.was)}</span><span class="save">Save ${money(p.was-p.price)}</span>`:''}
+      </div>
+      <p class="pd-desc">${p.desc}</p>
+      <div class="pd-actions">
+        <button class="btn btn-outline" id="pdAddCart">Add to Cart</button>
+        <button class="btn btn-dark" id="pdBuyNow">${p.free?'Download Free':'Buy Now'}</button>
+      </div>
+      ${p.id===EDITOR_PRODUCT_ID?`<button class="btn btn-accent btn-block" id="pdEditOnline" style="margin-bottom:22px;">✎ Edit this resume online</button>`:''}
+      <div class="pd-meta-list">
+        <div class="pd-meta-item"><span class="ic">${ICONS.file}</span><div><b>File formats</b><span>${p.formats.join(', ')}</span></div></div>
+        <div class="pd-meta-item"><span class="ic">${ICONS.badge}</span><div><b>${p.ats}% ATS match</b><span>Recruiter-tested layout</span></div></div>
+        <div class="pd-meta-item"><span class="ic">${ICONS.edit}</span><div><b>Fully editable</b><span>Word &amp; Canva compatible</span></div></div>
+        <div class="pd-meta-item"><span class="ic">${ICONS.download}</span><div><b>Instant download</b><span>Delivered right after checkout</span></div></div>
+      </div>
+      <div class="pd-tabs">
+        <div class="pd-tab active" data-tab="desc">Description</div>
+        <div class="pd-tab" data-tab="includes">What's included</div>
+        <div class="pd-tab" data-tab="faq">FAQ</div>
+      </div>
+      <div id="pdTabContent">
+        <p style="color:var(--ink-soft); font-size:14.5px;">${p.desc}</p>
+      </div>
+    </div>
+  </div></section>
+  <section class="section-soft"><div class="wrap">
+    <div class="section-head"><h2 style="font-size:26px;">You might also like</h2></div>
+    <div class="grid grid-4">${related.map(productCard).join('')}</div>
+  </div></section>
+  `;
+
+  setTimeout(()=>{
+    $('#pdAddCart').addEventListener('click', ()=>addToCart(p.id));
+    $('#pdBuyNow').addEventListener('click', ()=>{ addToCart(p.id); location.hash='#/checkout'; });
+    const editBtn=$('#pdEditOnline'); if(editBtn) editBtn.addEventListener('click', ()=>{ location.hash='#/editor/'+p.id; });
+    $$('.pd-thumbs .th').forEach(th=>th.addEventListener('click', ()=>{
+      $$('.pd-thumbs .th').forEach(t=>t.classList.remove('active')); th.classList.add('active');
+      $('#pdMainImg').innerHTML = th.innerHTML;
+    }));
+    $$('.pd-tab').forEach(tab=>tab.addEventListener('click', ()=>{
+      $$('.pd-tab').forEach(t=>t.classList.remove('active')); tab.classList.add('active');
+      const c = $('#pdTabContent');
+      if(tab.dataset.tab==='desc') c.innerHTML = `<p style="color:var(--ink-soft); font-size:14.5px;">${p.desc}</p>`;
+      else if(tab.dataset.tab==='includes') c.innerHTML = `<ul class="included-list">${p.includes.map(i=>`<li>${ICONS.check}${i}</li>`).join('')}</ul>`;
+      else c.innerHTML = `<div class="faq-list" style="margin:0;">${FAQS.slice(0,3).map((f,i)=>faqItem(f,'pd'+i)).join('')}</div>`, bindFaq();
+    }));
+    bindCardNav();
+  },0);
+  return html;
+}
+
+/* ---- Cart page (redirect helper — main flow uses drawer) ---- */
+function renderCartPage(){
+  openCart();
+  return `<div class="page-hero"><div class="wrap"><h1>Your Cart</h1></div></div><section><div class="wrap"><p style="color:var(--ink-soft)">Your cart is open on the right. <a href="#/shop" style="text-decoration:underline;">Continue browsing templates →</a></p></div></section>`;
+}
+
+/* ---- Checkout ---- */
+function renderCheckout(){
+  if(STATE.cart.length===0){
+    return `<div class="page-hero"><div class="wrap"><h1>Checkout</h1></div></div>
+    <section><div class="wrap" style="text-align:center; padding:40px 0;"><p style="color:var(--ink-soft); margin-bottom:20px;">Your cart is empty.</p><a href="#/shop" class="btn btn-dark">Browse Templates</a></div></section>`;
+  }
+  const t = cartTotals();
+  const html = `
+  <div class="page-hero"><div class="wrap"><div class="crumb"><a href="#/">Home</a> / Checkout</div><h1>Checkout</h1></div></div>
+  <section><div class="wrap checkout-grid">
+    <div>
+      <div class="form-box">
+        <h4>1. Contact information</h4>
+        <div class="field"><label>Email address</label><input type="email" id="coEmail" placeholder="you@example.com"></div>
+      </div>
+      <div class="form-box">
+        <h4>2. Payment method</h4>
+        <div class="pay-methods">
+          <div class="pay-method active" data-pay="card">💳 Card</div>
+          <div class="pay-method" data-pay="paypal">🅿️ PayPal</div>
+          <div class="pay-method" data-pay="upi">📱 UPI</div>
+        </div>
+        <div id="payFields">
+          <div class="form-row" style="margin-top:16px;">
+            <div class="field" style="grid-column:1/-1;"><label>Card number</label><input type="text" placeholder="4242 4242 4242 4242"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Expiry</label><input type="text" placeholder="MM / YY"></div>
+            <div class="field"><label>CVC</label><input type="text" placeholder="123"></div>
+          </div>
+        </div>
+        <p style="font-size:11.5px; color:var(--ink-faint); margin-top:6px;">🔒 This is a demo checkout — no real payment is processed. Built so a real payment provider (Stripe, PayPal, Razorpay) can be dropped in here.</p>
+      </div>
+      <div class="form-box">
+        <h4>3. Have a coupon?</h4>
+        <div class="coupon-row"><input type="text" id="coCoupon" placeholder="Enter coupon code" value="${STATE.coupon?STATE.coupon.code:''}"><button class="btn btn-ghost btn-sm" id="coApply">Apply</button></div>
+        <div id="coCouponMsg"></div>
+      </div>
+    </div>
+    <div class="order-summary">
+      <h4>Order summary</h4>
+      <div id="osItems">${STATE.cart.map(i=>`<div class="os-item"><div class="thumb">${resumeSVG(i)}</div><b>${i.name}</b><span class="p">${money(i.price)}</span></div>`).join('')}</div>
+      <div class="drawer-totals" id="osTotals" style="margin-top:14px;"></div>
+      <button class="btn btn-dark btn-block" id="placeOrder">Place Order — ${money(t.total)}</button>
+    </div>
+  </div></section>`;
+
+  setTimeout(()=>{
+    function drawTotals(){
+      const tt = cartTotals();
+      $('#osTotals').innerHTML = `
+        <div class="row"><span>Subtotal</span><span>${money(tt.subtotal)}</span></div>
+        ${tt.discount>0?`<div class="row" style="color:var(--green)"><span>Discount</span><span>-${money(tt.discount)}</span></div>`:''}
+        <div class="row grand"><span>Total</span><span>${money(tt.total)}</span></div>`;
+      $('#placeOrder').textContent = `Place Order — ${money(tt.total)}`;
+    }
+    drawTotals();
+    $$('.pay-method').forEach(m=>m.addEventListener('click', ()=>{ $$('.pay-method').forEach(x=>x.classList.remove('active')); m.classList.add('active'); }));
+    $('#coApply').addEventListener('click', ()=>{
+      const code = $('#coCoupon').value.trim().toUpperCase();
+      const found = STATE.coupons.find(c=>c.code===code && c.active);
+      STATE.coupon = found || null;
+      $('#coCouponMsg').innerHTML = found ? `<div class="coupon-msg ok">✓ Applied ${found.code}</div>` : (code?`<div class="coupon-msg err">✕ Invalid code</div>`:'');
+      drawTotals();
+    });
+    $('#placeOrder').addEventListener('click', ()=>{
+      const email = $('#coEmail').value.trim();
+      if(!email){ toast('Please enter your email'); return; }
+      const order = {
+        id:'RC-'+Math.floor(100000+Math.random()*900000),
+        items:[...STATE.cart], total:cartTotals().total, email,
+        date:new Date().toISOString().slice(0,10), status:'completed'
+      };
+      STATE.orders.unshift(order);
+      window._lastOrder = order;
+      STATE.cart = []; STATE.coupon = null;
+      renderCart();
+      location.hash = '#/order-confirmation';
+    });
+  },0);
+  return html;
+}
+
+function renderConfirmation(){
+  const order = window._lastOrder;
+  if(!order) return `<section><div class="wrap"><div class="empty-hint">No recent order found. <a href="#/shop">Browse templates</a></div></div></section>`;
+  return `
+  <section><div class="wrap confirm-box">
+    <div class="confirm-icon">${ICONS.check}</div>
+    <h1>Order confirmed!</h1>
+    <p>Thanks — your templates are ready to download. A copy of this receipt has been "emailed" to ${order.email}.</p>
+    <div class="order-id-box"><span>Order ID</span><strong>${order.id}</strong></div>
+    <div class="download-list">
+      ${order.items.map(i=>`<div class="download-item"><div class="ic">${ICONS.file}</div><div><b>${i.name}</b><span>.docx, .pdf, Canva link</span></div><button class="btn btn-ghost btn-sm" onclick="toast('Downloading ${i.name.replace(/'/g,"")}... (demo)')">Download</button></div>`).join('')}
+    </div>
+    <a href="#/shop" class="btn btn-dark">Continue Shopping</a>
+  </div></section>`;
+}
+
+/* ---- Static info pages ---- */
+function staticPage(title, body){
+  return `<div class="page-hero"><div class="wrap"><div class="crumb"><a href="#/">Home</a> / ${title}</div><h1>${title}</h1></div></div>
+  <section><div class="wrap" style="max-width:760px;"><div style="color:var(--ink-soft); font-size:15px; line-height:1.8;">${body}</div></div></section>`;
+}
+
+
+/* =========================================================
+   ONLINE RESUME EDITOR
+   ========================================================= */
+const DEFAULT_RESUME = {
+  labels:{summary:'Summary',experience:'Experience',education:'Education',projects:'Projects',skills:'Skills',certifications:'Certifications'},
+  name:'Your Name',
+  phone:'(000) 000-0000',
+  location:'City, Country',
+  email:'you@email.com',
+  linkedin:'LinkedIn',
+  github:'Github',
+  portfolio:'Portfolio',
+  summary:'One or two sentences summarizing your experience, specialty, and a standout achievement or two. This section is optional — delete it if you’d rather start with Experience.',
+  experience:[
+    {title:'Job Title',dates:'Start Date – End Date',company:'Company Name',place:'City, Country',
+     bullets:['What you did and the impact it had. Lead with a strong verb and quantify the result where you can.','Add as many bullets as you need — just copy this line.']},
+    {title:'Job Title',dates:'Start Date – End Date',company:'Company Name',place:'City, Country',
+     bullets:['Another accomplishment or responsibility.']}
+  ],
+  education:[{school:'University Name',dates:'Start Date – End Date',degree:'Degree and Major'}],
+  projects:[{name:'Project Name',stack:'Tech · Stack · Used',desc:'What the project does and what you built or contributed. Quantify the outcome if you can.'}],
+  skills:[
+    {cat:'Category One',skills:'skill, skill, skill'},
+    {cat:'Category Two',skills:'skill, skill, skill'},
+    {cat:'Category Three',skills:'skill, skill, skill'}
+  ],
+  certifications:[{name:'Certification Name',link:'Link'},{name:'Certification Name',link:'Link'}]
+};
+
+function loadResumeData(){
+  try{
+    const saved=localStorage.getItem('resumecraft_classic_resume');
+    if(saved) return JSON.parse(saved);
+  }catch(e){}
+  return JSON.parse(JSON.stringify(DEFAULT_RESUME));
+}
+function saveResumeData(){
+  try{ localStorage.setItem('resumecraft_classic_resume',JSON.stringify(collectResumeData())); toast('Resume saved on this device'); }
+  catch(e){ toast('Could not save locally'); }
+}
+function esc(v){
+  return String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function editable(v,cls=''){ return `<span class="${cls}" contenteditable="true">${esc(v)}</span>`; }
+
+function renderResumePage(d, edit=true){
+  return `<div class="resume-page ${edit?'editor-mode':''}" id="resumePage">
+    <div class="r-head">
+      <div class="r-name" data-field="name">${editable(d.name)}</div>
+      <div class="r-contact">
+        ${editable(d.phone)} | ${editable(d.location)} | ${editable(d.email)} | ${editable(d.linkedin)} | ${editable(d.github)} | ${editable(d.portfolio)}
+      </div>
+    </div>
+
+    <section class="r-section" id="sec-summary">
+      <div class="r-title" data-label="summary">${editable(d.labels?.summary||'Summary')}</div>
+      <div class="r-summary" data-field="summary">${editable(d.summary)}</div>
+    </section>
+
+    <section class="r-section" id="sec-experience">
+      <div class="r-title" data-label="experience">${editable(d.labels?.experience||'Experience')}</div>
+      <div id="experienceList">${d.experience.map((x,i)=>resumeExperience(x,i)).join('')}</div>
+      <button class="r-add" data-add="experience">+ Add experience</button>
+    </section>
+
+    <section class="r-section" id="sec-education">
+      <div class="r-title" data-label="education">${editable(d.labels?.education||'Education')}</div>
+      <div id="educationList">${d.education.map((x,i)=>resumeEducation(x,i)).join('')}</div>
+      <button class="r-add" data-add="education">+ Add education</button>
+    </section>
+
+    <section class="r-section" id="sec-projects">
+      <div class="r-title" data-label="projects">${editable(d.labels?.projects||'Projects')}</div>
+      <div id="projectsList">${d.projects.map((x,i)=>resumeProject(x,i)).join('')}</div>
+      <button class="r-add" data-add="project">+ Add project</button>
+    </section>
+
+    <section class="r-section" id="sec-skills">
+      <div class="r-title" data-label="skills">${editable(d.labels?.skills||'Skills')}</div>
+      <div id="skillsList">${d.skills.map((x,i)=>resumeSkill(x,i)).join('')}</div>
+      <button class="r-add" data-add="skill">+ Add skill category</button>
+    </section>
+
+    <section class="r-section" id="sec-certifications">
+      <div class="r-title" data-label="certifications">${editable(d.labels?.certifications||'Certifications')}</div>
+      <div id="certificationsList">${d.certifications.map((x,i)=>resumeCert(x,i)).join('')}</div>
+      <button class="r-add" data-add="certification">+ Add certification</button>
+    </section>
+  </div>`;
+}
+function actionButtons(type,i){ return `<span class="r-actions"><button type="button" data-remove="${type}" data-index="${i}" title="Remove">×</button></span>`; }
+function resumeExperience(x,i){
+  return `<div class="r-entry" data-item="experience" data-index="${i}">
+    ${actionButtons('experience',i)}
+    <div class="r-entry-head"><span>${editable(x.title)}</span><span>${editable(x.dates)}</span></div>
+    <div class="r-entry-sub"><span>${editable(x.company)}</span><span>${editable(x.place)}</span></div>
+    <ul class="r-bullets">${x.bullets.map(b=>`<li>${editable(b)}</li>`).join('')}</ul>
+    <button class="r-add" data-add-bullet="${i}">+ Add bullet</button>
+  </div>`;
+}
+function resumeEducation(x,i){
+  return `<div class="r-entry" data-item="education" data-index="${i}">
+    ${actionButtons('education',i)}
+    <div class="r-entry-head"><span>${editable(x.school)}</span><span>${editable(x.dates)}</span></div>
+    <div class="r-entry-sub"><span>${editable(x.degree)}</span></div>
+  </div>`;
+}
+function resumeProject(x,i){
+  return `<div class="r-entry r-project-wrap" data-item="project" data-index="${i}">
+    ${actionButtons('project',i)}
+    <div class="r-project"><strong>${editable(x.name)}</strong> ${editable(x.stack)}</div>
+    <div class="r-bullets"><span>•</span> ${editable(x.desc)}</div>
+  </div>`;
+}
+function resumeSkill(x,i){
+  return `<div class="r-entry r-project-wrap" data-item="skill" data-index="${i}">
+    ${actionButtons('skill',i)}
+    <div class="r-skill"><strong>${editable(x.cat)}:</strong> ${editable(x.skills)}</div>
+  </div>`;
+}
+function resumeCert(x,i){
+  return `<div class="r-entry r-cert-wrap" data-item="certification" data-index="${i}">
+    ${actionButtons('certification',i)}
+    <div class="r-cert">${editable(x.name)}: ${editable(x.link)}</div>
+  </div>`;
+}
+function textOf(el){ return el ? el.textContent.trim() : ''; }
+function collectResumeData(){
+  const page=$('#resumePage');
+  if(!page) return loadResumeData();
+  const d=loadResumeData();
+  const ed=page.querySelectorAll('.r-head [contenteditable="true"]');
+  if(ed.length>=7){ d.name=textOf(ed[0]); d.phone=textOf(ed[1]); d.location=textOf(ed[2]); d.email=textOf(ed[3]); d.linkedin=textOf(ed[4]); d.github=textOf(ed[5]); d.portfolio=textOf(ed[6]); }
+  d.labels=d.labels||{};
+  page.querySelectorAll('.r-title[data-label]').forEach(el=>{ d.labels[el.dataset.label]=textOf(el.querySelector('[contenteditable="true"]')); });
+  const sum=page.querySelector('[data-field="summary"] [contenteditable="true"]'); if(sum) d.summary=textOf(sum);
+  d.experience=[...page.querySelectorAll('#experienceList .r-entry')].map(e=>{
+    const spans=e.querySelectorAll('.r-entry-head [contenteditable="true"]');
+    const sub=e.querySelectorAll('.r-entry-sub [contenteditable="true"]');
+    return {title:textOf(spans[0]),dates:textOf(spans[1]),company:textOf(sub[0]),place:textOf(sub[1]),
+      bullets:[...e.querySelectorAll('.r-bullets li [contenteditable="true"]')].map(textOf)};
+  });
+  d.education=[...page.querySelectorAll('#educationList .r-entry')].map(e=>{
+    const h=e.querySelectorAll('.r-entry-head [contenteditable="true"]'), s=e.querySelectorAll('.r-entry-sub [contenteditable="true"]');
+    return {school:textOf(h[0]),dates:textOf(h[1]),degree:textOf(s[0])};
+  });
+  d.projects=[...page.querySelectorAll('#projectsList .r-entry')].map(e=>{
+    const c=e.querySelectorAll('[contenteditable="true"]');
+    return {name:textOf(c[0]),stack:textOf(c[1]),desc:textOf(c[2])};
+  });
+  d.skills=[...page.querySelectorAll('#skillsList .r-entry')].map(e=>{
+    const c=e.querySelectorAll('[contenteditable="true"]');
+    return {cat:textOf(c[0]),skills:textOf(c[1])};
+  });
+  d.certifications=[...page.querySelectorAll('#certificationsList .r-entry')].map(e=>{
+    const c=e.querySelectorAll('[contenteditable="true"]');
+    return {name:textOf(c[0]),link:textOf(c[1])};
+  });
+  return d;
+}
+function rerenderResumeLists(){
+  const d=collectResumeData();
+  $('#experienceList').innerHTML=d.experience.map((x,i)=>resumeExperience(x,i)).join('');
+  $('#educationList').innerHTML=d.education.map((x,i)=>resumeEducation(x,i)).join('');
+  $('#projectsList').innerHTML=d.projects.map((x,i)=>resumeProject(x,i)).join('');
+  $('#skillsList').innerHTML=d.skills.map((x,i)=>resumeSkill(x,i)).join('');
+  $('#certificationsList').innerHTML=d.certifications.map((x,i)=>resumeCert(x,i)).join('');
+  bindResumeEditor();
+}
+function addResumeItem(type){
+  const d=collectResumeData();
+  if(type==='experience') d.experience.push({title:'Job Title',dates:'Start Date – End Date',company:'Company Name',place:'City, Country',bullets:['Achievement or responsibility.']});
+  if(type==='education') d.education.push({school:'University Name',dates:'Start Date – End Date',degree:'Degree and Major'});
+  if(type==='project') d.projects.push({name:'Project Name',stack:'Tech · Stack · Used',desc:'What you built or contributed.'});
+  if(type==='skill') d.skills.push({cat:'Category',skills:'skill, skill, skill'});
+  if(type==='certification') d.certifications.push({name:'Certification Name',link:'Link'});
+  $('#resumePage').innerHTML=renderResumePage(d,true).replace(/^<div class="resume-page[^>]*>/,'').replace(/<\/div>$/,'');
+  bindResumeEditor();
+}
+function bindResumeEditor(){
+  const page=$('#resumePage'); if(!page) return;
+  page.querySelectorAll('[contenteditable="true"]').forEach(el=>{
+    el.addEventListener('keydown',e=>{ if(e.key==='Enter' && !el.closest('li')){ e.preventDefault(); }});
+    el.addEventListener('blur',()=>{ try{localStorage.setItem('resumecraft_classic_resume',JSON.stringify(collectResumeData()));}catch(e){} });
+  });
+  page.querySelectorAll('[data-add]').forEach(b=>b.addEventListener('click',()=>addResumeItem(b.dataset.add)));
+  page.querySelectorAll('[data-add-bullet]').forEach(b=>b.addEventListener('click',()=>{
+    const d=collectResumeData(), i=Number(b.dataset.addBullet); if(d.experience[i]) d.experience[i].bullets.push('Achievement or responsibility.');
+    $('#resumePage').outerHTML=renderResumePage(d,true); bindResumeEditor();
+  }));
+  page.querySelectorAll('[data-remove]').forEach(b=>b.addEventListener('click',()=>{
+    const d=collectResumeData(), type=b.dataset.remove, i=Number(b.dataset.index);
+    if(!d[type]) return; d[type].splice(i,1); 
+    if(type==='experience') $('#experienceList').innerHTML=d.experience.map((x,j)=>resumeExperience(x,j)).join('');
+    if(type==='education') $('#educationList').innerHTML=d.education.map((x,j)=>resumeEducation(x,j)).join('');
+    if(type==='project') $('#projectsList').innerHTML=d.projects.map((x,j)=>resumeProject(x,j)).join('');
+    if(type==='skill') $('#skillsList').innerHTML=d.skills.map((x,j)=>resumeSkill(x,j)).join('');
+    if(type==='certification') $('#certificationsList').innerHTML=d.certifications.map((x,j)=>resumeCert(x,j)).join('');
+    bindResumeEditor();
+  }));
+}
+function renderEditor(){
+  const d=loadResumeData();
+  return `<div class="editor-shell"><div class="wrap">
+    <div class="editor-toolbar">
+      <div>
+        <strong style="font-family:var(--serif);font-size:19px;">Resume Editor</strong>
+        <div class="hint">Click any text in the page and type. Changes are saved on this device.</div>
+      </div>
+      <div class="tools">
+        <button class="btn btn-ghost btn-sm" id="resetResume">Reset</button>
+        <button class="btn btn-outline btn-sm" id="saveResume">Save</button>
+        <button class="btn btn-accent btn-sm" id="printResume">Print / Save PDF</button>
+      </div>
+    </div>
+    <div class="resume-stage">${renderResumePage(d,true)}</div>
+    <div class="editor-side-note">A4 one-page layout • Use your browser's Print dialog and choose “Save as PDF”.</div>
+  </div></div>`;
+}
+function initEditor(){
+  bindResumeEditor();
+  $('#saveResume').addEventListener('click',saveResumeData);
+  $('#printResume').addEventListener('click',()=>{ saveResumeData(); window.print(); });
+  $('#resetResume').addEventListener('click',()=>{
+    if(confirm('Reset this resume to the original template?')){
+      localStorage.removeItem('resumecraft_classic_resume');
+      location.hash='#/editor/9999';
+    }
+  });
+}
+
+/* =========================================================
+   ADMIN DASHBOARD
+   ========================================================= */
+function adminNav(active){
+  const links = [
+    ['overview','dashboard','Overview'],
+    ['products','box','Products'],
+    ['orders','cart','Orders'],
+    ['customers','users','Customers'],
+    ['categories','tag','Categories'],
+    ['discounts','percent','Discounts'],
+  ];
+  return `<div class="admin-side">
+    <div class="a-title">ResumeCraft Admin</div>
+    ${links.map(([id,ic,label])=>`<a class="admin-link ${active===id?'active':''}" href="#/admin/${id}">${ICONS[ic]} ${label}</a>`).join('')}
+  </div>`;
+}
+
+function renderAdmin(sub){
+  sub = sub || 'overview';
+  let content = '';
+  if(sub==='overview') content = adminOverview();
+  else if(sub==='products') content = adminProducts();
+  else if(sub==='orders') content = adminOrders();
+  else if(sub==='customers') content = adminCustomers();
+  else if(sub==='categories') content = adminCategories();
+  else if(sub==='discounts') content = adminDiscounts();
+  return `<div class="admin-layout">${adminNav(sub)}<div class="admin-main">${content}</div></div>`;
+}
+
+function adminOverview(){
+  const totalOrders = STATE.orders.length;
+  const revenue = STATE.orders.reduce((s,o)=>s+o.total,0);
+  const totalProducts = STATE.products.length;
+  const totalCustomers = STATE.customers.length;
+  const recentOrders = STATE.orders.slice(0,5);
+  return `
+  <div class="admin-head"><h2>Dashboard overview</h2></div>
+  <div class="kpi-grid">
+    <div class="kpi-card"><span>Total revenue</span><b>${money(revenue)}</b><span class="delta">Demo session data</span></div>
+    <div class="kpi-card"><span>Orders</span><b>${totalOrders}</b><span class="delta">This session</span></div>
+    <div class="kpi-card"><span>Products</span><b>${totalProducts}</b><span class="delta">${STATE.categories.length} categories</span></div>
+    <div class="kpi-card"><span>Customers</span><b>${totalCustomers}</b><span class="delta">Sample data</span></div>
+  </div>
+  <div class="admin-table-box">
+    <table><thead><tr><th>Order</th><th>Email</th><th>Items</th><th>Total</th><th>Status</th></tr></thead>
+    <tbody>${recentOrders.length? recentOrders.map(o=>`<tr><td>${o.id}</td><td>${o.email}</td><td>${o.items.length}</td><td>${money(o.total)}</td><td><span class="status-pill ${o.status}">${o.status}</span></td></tr>`).join('') : `<tr><td colspan="5" class="empty-hint">No orders yet this session — place a test order from the storefront.</td></tr>`}</tbody></table>
+  </div>`;
+}
+
+function adminProducts(){
+  setTimeout(bindAdminProducts,0);
+  return `
+  <div class="admin-head"><h2>Products</h2><button class="btn btn-dark btn-sm" id="addProductBtn">+ Add Template</button></div>
+  <div class="admin-table-box"><table>
+    <thead><tr><th>Template</th><th>Category</th><th>Price</th><th>Status</th><th>Sold</th><th></th></tr></thead>
+    <tbody id="adminProductRows">${STATE.products.map(adminProductRow).join('')}</tbody>
+  </table></div>
+  ${adminProductModal()}
+  `;
+}
+function adminProductRow(p){
+  return `<tr data-id="${p.id}">
+    <td><div class="tbl-prod"><div class="tbl-thumb">${resumeSVG(p)}</div>${p.name}</div></td>
+    <td>${p.category}</td>
+    <td>${p.free?'Free':money(p.price)}</td>
+    <td><span class="status-pill ${p.status}">${p.status}</span></td>
+    <td>${p.sold}</td>
+    <td><div class="row-actions"><button data-edit="${p.id}">Edit</button><button data-del="${p.id}" class="danger">Delete</button></div></td>
+  </tr>`;
+}
+function adminProductModal(){
+  return `<div class="admin-modal-overlay" id="prodModalOverlay"><div class="admin-modal">
+    <h3 id="prodModalTitle">Add Template</h3>
+    <div class="field"><label>Template name</label><input type="text" id="pmName"></div>
+    <div class="form-row">
+      <div class="field"><label>Category</label><select id="pmCat">${STATE.categories.map(c=>`<option value="${c.id}">${c.name}</option>`).join('')}</select></div>
+      <div class="field"><label>Price (INR ₹)</label><input type="number" id="pmPrice" value="49" min="49" readonly></div>
+    </div>
+    <div class="field"><label>Preview images</label><div class="upload-box">${ICONS.file}<br>Drag & drop preview images here, or click to upload<input type="file" multiple style="display:none;"></div></div>
+    <div class="field"><label>Downloadable file (.zip)</label><div class="upload-box">${ICONS.download}<br>Upload the editable source file customers will receive<input type="file" style="display:none;"></div></div>
+    <div class="field"><label>Status</label><select id="pmStatus"><option value="active">Active</option><option value="draft">Draft</option></select></div>
+    <div style="display:flex; gap:10px; margin-top:8px;"><button class="btn btn-dark" id="pmSave">Save Template</button><button class="btn btn-ghost" id="pmCancel">Cancel</button></div>
+  </div></div>`;
+}
+function bindAdminProducts(){
+  const overlay = $('#prodModalOverlay');
+  let editingId = null;
+  function openModal(p){
+    editingId = p ? p.id : null;
+    $('#prodModalTitle').textContent = p ? 'Edit Template' : 'Add Template';
+    $('#pmName').value = p ? p.name : '';
+    $('#pmCat').value = p ? p.categoryId : STATE.categories[0].id;
+    $('#pmPrice').value = 49;
+    $('#pmStatus').value = p ? p.status : 'active';
+    overlay.classList.add('open');
+  }
+  $('#addProductBtn').addEventListener('click', ()=>openModal(null));
+  $('#pmCancel').addEventListener('click', ()=>overlay.classList.remove('open'));
+  overlay.addEventListener('click', e=>{ if(e.target===overlay) overlay.classList.remove('open'); });
+  $('#pmSave').addEventListener('click', ()=>{
+    const name = $('#pmName').value.trim() || 'Untitled Template';
+    const catId = $('#pmCat').value;
+    const cat = STATE.categories.find(c=>c.id===catId);
+    const price = 49;
+    const status = $('#pmStatus').value;
+    if(editingId){
+      const p = findProduct(editingId);
+      Object.assign(p, {name, categoryId:catId, category:cat.name, price, status});
+      toast('Template updated');
+    } else {
+      const newP = {
+        id: Math.max(...STATE.products.map(p=>p.id))+1, name, categoryId:catId, category:cat.name,
+        price, was:null, rating:'5.0', reviews:0, free:false, ats:95,
+        palette: PALETTES[STATE.products.length%PALETTES.length], layout: LAYOUTS[STATE.products.length%4],
+        status, sold:0, desc:'A newly added template — description coming soon.',
+        formats:['.docx','.pdf','Canva link'], includes:['1 resume template','Editing guide'],
+      };
+      STATE.products.push(newP);
+      STATE.categories.forEach(c=>c.count = STATE.products.filter(p=>p.categoryId===c.id).length);
+      toast('Template added');
+    }
+    overlay.classList.remove('open');
+    $('#adminProductRows').innerHTML = STATE.products.map(adminProductRow).join('');
+    bindRowActions();
+  });
+  function bindRowActions(){
+    $$('[data-edit]').forEach(b=>b.addEventListener('click', ()=>openModal(findProduct(b.dataset.edit))));
+    $$('[data-del]').forEach(b=>b.addEventListener('click', ()=>{
+      STATE.products = STATE.products.filter(p=>p.id!==Number(b.dataset.del));
+      STATE.categories.forEach(c=>c.count = STATE.products.filter(p=>p.categoryId===c.id).length);
+      $('#adminProductRows').innerHTML = STATE.products.map(adminProductRow).join('');
+      bindRowActions();
+      toast('Template deleted');
+    }));
+  }
+  bindRowActions();
+}
+
+function adminOrders(){
+  return `
+  <div class="admin-head"><h2>Orders</h2></div>
+  <div class="admin-table-box"><table>
+    <thead><tr><th>Order</th><th>Date</th><th>Email</th><th>Items</th><th>Total</th><th>Status</th></tr></thead>
+    <tbody>${STATE.orders.length ? STATE.orders.map(o=>`<tr><td>${o.id}</td><td>${o.date}</td><td>${o.email}</td><td>${o.items.length}</td><td>${money(o.total)}</td><td><span class="status-pill ${o.status}">${o.status}</span></td></tr>`).join('') : `<tr><td colspan="6" class="empty-hint">No orders placed yet this session. Try checking out from the storefront to see one appear here.</td></tr>`}</tbody>
+  </table></div>`;
+}
+
+function adminCustomers(){
+  return `
+  <div class="admin-head"><h2>Customers</h2></div>
+  <div class="admin-table-box"><table>
+    <thead><tr><th>Name</th><th>Email</th><th>Orders</th><th>Total spent</th><th>Joined</th></tr></thead>
+    <tbody>${STATE.customers.map(c=>`<tr><td>${c.name}</td><td>${c.email}</td><td>${c.orders}</td><td>${money(c.spent)}</td><td>${c.joined}</td></tr>`).join('')}</tbody>
+  </table></div>`;
+}
+
+function adminCategories(){
+  setTimeout(()=>{
+    const add = $('#addCatBtn');
+    if(add) add.addEventListener('click', ()=>{
+      const name = (prompt('Category name:') || '').trim();
+      if(!name) return;
+      const id = name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+      if(!id || STATE.categories.some(c=>c.id===id)){ toast('Category already exists'); return; }
+      STATE.categories.push({id,name,icon:'tag',count:0});
+      toast('Category added');
+      renderRoute();
+    });
+    $$('[data-edit-cat]').forEach(btn=>btn.addEventListener('click', ()=>{
+      const cat=STATE.categories.find(c=>c.id===btn.dataset.editCat);
+      if(!cat) return;
+      const name=(prompt('Rename category:',cat.name)||'').trim();
+      if(!name || name===cat.name) return;
+      cat.name=name;
+      STATE.products.forEach(p=>{ if(p.categoryId===cat.id) p.category=name; });
+      renderRoute();
+      toast('Category updated');
+    }));
+  },0);
+  return `
+  <div class="admin-head"><h2>Categories</h2><button class="btn btn-dark btn-sm" id="addCatBtn">+ Add Category</button></div>
+  <div class="admin-table-box"><table>
+    <thead><tr><th>Category</th><th>Templates</th><th></th></tr></thead>
+    <tbody>${STATE.categories.map(c=>`<tr><td>${c.name}</td><td>${c.count}</td><td><div class="row-actions"><button data-edit-cat="${c.id}">Edit</button></div></td></tr>`).join('')}</tbody>
+  </table></div>
+  <p style="font-size:12.5px; color:var(--ink-faint);">Categories can be added or renamed from this panel.</p>
+  `;
+}
+
+function adminDiscounts(){
+  setTimeout(()=>{
+    const btn = $('#addCouponBtn');
+    if(btn) btn.addEventListener('click', ()=>{
+      const code = prompt('Coupon code (e.g. SUMMER25):');
+      if(!code) return;
+      const value = Number(prompt('Discount percent (e.g. 25):','10'))||10;
+      STATE.coupons.push({code:code.toUpperCase(), type:'percent', value, active:true});
+      renderRoute();
+      toast('Coupon created');
+    });
+    $$('[data-toggle-coupon]').forEach(b=>b.addEventListener('click', ()=>{
+      const c = STATE.coupons.find(x=>x.code===b.dataset.toggleCoupon);
+      c.active = !c.active; renderRoute();
+    }));
+  },0);
+  return `
+  <div class="admin-head"><h2>Discounts & Coupons</h2><button class="btn btn-dark btn-sm" id="addCouponBtn">+ Create Coupon</button></div>
+  <div class="admin-table-box"><table>
+    <thead><tr><th>Code</th><th>Type</th><th>Value</th><th>Status</th><th></th></tr></thead>
+    <tbody>${STATE.coupons.map(c=>`<tr><td><strong>${c.code}</strong></td><td>${c.type}</td><td>${c.type==='percent'?c.value+'%':money(c.value)}</td><td><span class="status-pill ${c.active?'active':'draft'}">${c.active?'active':'inactive'}</span></td><td><div class="row-actions"><button data-toggle-coupon="${c.code}">${c.active?'Deactivate':'Activate'}</button></div></td></tr>`).join('')}</tbody>
+  </table></div>`;
+}
+
+/* =========================================================
+   ROUTER
+   ========================================================= */
+function bindCardNav(){
+  $$('[data-goto]').forEach(el=>{
+    el.style.cursor='pointer';
+    el.addEventListener('click', (e)=>{ location.hash = el.dataset.goto; });
+  });
+}
+
+function renderRoute(){
+  const hash = location.hash.replace(/^#/,'') || '/';
+  const [path, query] = hash.split('?');
+  const parts = path.split('/').filter(Boolean);
+  const app = $('#app');
+  window.scrollTo({top:0, behavior:'instant'});
+
+  if(parts.length===0){ app.innerHTML = renderHome(); }
+  else if(parts[0]==='shop'){ app.innerHTML = renderShop(query); }
+  else if(parts[0]==='categories'){ app.innerHTML = renderCategories(); }
+  else if(parts[0]==='bundles'){ app.innerHTML = renderBundles(); setTimeout(()=>{ const b=$('#bundleBuy2'); if(b) b.addEventListener('click', ()=>toast('Bundle added to cart (demo)')); },0); }
+  else if(parts[0]==='blog'){ app.innerHTML = renderBlog(); }
+  else if(parts[0]==='product'){ app.innerHTML = renderProduct(parts[1]); }
+  else if(parts[0]==='cart'){ app.innerHTML = renderCartPage(); }
+  else if(parts[0]==='checkout'){ app.innerHTML = renderCheckout(); }
+  else if(parts[0]==='order-confirmation'){ app.innerHTML = renderConfirmation(); }
+  else if(parts[0]==='editor'){ app.innerHTML = renderEditor(); setTimeout(initEditor,0); }
+  else if(parts[0]==='admin'){ app.innerHTML = renderAdmin(parts[1]); }
+  else if(parts[0]==='about'){ app.innerHTML = staticPage('About', `<p>ResumeCraft was built by a small team of resume writers, recruiters and designers who were tired of watching great candidates get filtered out by bad formatting. Every template we sell is checked against major applicant tracking systems before it ever reaches the shop.</p>`); }
+  else if(parts[0]==='contact'){ app.innerHTML = staticPage('Contact', `<p>Questions about a template, a bulk license, an order, download, payment, or a bug on the site? Reach us at <a href="mailto:resumecraft.support@gmail.com"><strong>resumecraft.support@gmail.com</strong></a> — we aim to respond within 5 minutes.</p><div style="margin-top:24px;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--surface);"><h3 style="margin-bottom:8px;">Customer Support</h3><p style="margin:0;">For order and template support, email us anytime. Refund requests are accepted within 7 days where eligible under our refund policy.</p><a class="btn btn-dark" style="margin-top:16px;display:inline-block;" href="mailto:resumecraft.support@gmail.com?subject=ResumeCraft%20Support">Email Support</a></div>`); }
+  else if(parts[0]==='faq'){ app.innerHTML = staticPage('FAQ', `<div class="faq-list" style="margin:0;">${FAQS.map((f,i)=>faqItem(f,'p'+i)).join('')}</div>`); setTimeout(bindFaq,0); }
+  else if(parts[0]==='refund-policy'){ app.innerHTML = staticPage('Refund Policy', `<p>Digital templates are non-refundable once downloaded, since the files can't be "returned". If a file is corrupted, missing, or doesn't match its listing, email resumecraft.support@gmail.com within 7 days of purchase for a free replacement or refund.</p>`); }
+  else if(parts[0]==='terms'){ app.innerHTML = staticPage('Terms of Service', `<p>Templates are licensed for personal, non-transferable use in your own job search. Reselling, redistributing, or reposting template files as your own is not permitted. See our commercial license option for agencies and career coaches.</p>`); }
+  else if(parts[0]==='privacy'){ app.innerHTML = staticPage('Privacy Policy', `<p>We collect only what's needed to process your order and deliver your files: your email address and payment confirmation. We never sell customer data.</p>`); }
+  else { app.innerHTML = `<section><div class="wrap" style="text-align:center; padding:80px 0;"><h1 class="serif">Page not found</h1><p style="color:var(--ink-soft); margin:16px 0 26px;">That page doesn't exist.</p><a href="#/" class="btn btn-dark">Go home</a></div></section>`; }
+
+  bindCardNav();
+  bindFaq();
+  const bb = $('#bundleBuy'); if(bb) bb.addEventListener('click', ()=>toast('Bundle added to cart (demo)'));
+}
+
+function initApp(){
+  // Bind global UI controls once, after the DOM exists.
+  const cartBtn=$('#cartBtn'), cartClose=$('#cartClose'), cartOverlay=$('#cartOverlay');
+  if(cartBtn) cartBtn.addEventListener('click', openCart);
+  if(cartClose) cartClose.addEventListener('click', closeCart);
+  if(cartOverlay) cartOverlay.addEventListener('click', closeCart);
+
+  const loginBtn=$('#loginBtn'), loginClose=$('#loginClose'), loginModal=$('#loginModal');
+  if(loginBtn) loginBtn.addEventListener('click', ()=>loginModal && loginModal.classList.add('open'));
+  if(loginClose) loginClose.addEventListener('click', ()=>loginModal && loginModal.classList.remove('open'));
+  if(loginModal) loginModal.addEventListener('click', e=>{ if(e.target===loginModal) loginModal.classList.remove('open'); });
+  $$('.modal-tab').forEach(tab=>tab.addEventListener('click', ()=>{
+    $$('.modal-tab').forEach(t=>t.classList.remove('active')); tab.classList.add('active');
+    const a=$('#loginTabLogin'), b=$('#loginTabSignup');
+    if(a) a.style.display=tab.dataset.tab==='login'?'block':'none';
+    if(b) b.style.display=tab.dataset.tab==='signup'?'block':'none';
+  }));
+  const loginSubmit=$('#loginSubmit'), signupSubmit=$('#signupSubmit');
+  if(loginSubmit) loginSubmit.addEventListener('click', e=>{ e.preventDefault(); toast('Logged in (demo)'); if(loginModal) loginModal.classList.remove('open'); });
+  if(signupSubmit) signupSubmit.addEventListener('click', e=>{ e.preventDefault(); toast('Account created (demo)'); if(loginModal) loginModal.classList.remove('open'); });
+
+  const menuToggle=$('#menuToggle'), navlinks=$('#navlinks'), navOverlay=$('#navOverlay');
+  if(menuToggle && navlinks && navOverlay){
+    menuToggle.addEventListener('click', ()=>{ navlinks.classList.toggle('open'); navOverlay.classList.toggle('open'); });
+    navOverlay.addEventListener('click', ()=>{ navlinks.classList.remove('open'); navOverlay.classList.remove('open'); });
+    navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{ navlinks.classList.remove('open'); navOverlay.classList.remove('open'); }));
+  }
+  if(window.innerWidth <= 1020){
+    const navDropBtn=$('.navdrop > button');
+    if(navDropBtn) navDropBtn.addEventListener('click', function(){ this.parentElement.classList.toggle('mobile-open'); });
+  }
+  const search=$('#headerSearch');
+  if(search) search.addEventListener('keydown', e=>{ if(e.key==='Enter') location.hash='#/shop?q='+encodeURIComponent(e.target.value.trim()); });
+
+  window.addEventListener('hashchange', renderRoute);
+  renderRoute();
+  renderCart();
+}
+
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', initApp);
+else initApp();
+</script>
+</body>
+</html>
